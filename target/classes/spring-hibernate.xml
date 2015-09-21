@@ -67,7 +67,7 @@ http://www.springframework.org/schema/aop/spring-aop-4.0.xsd
 		<!-- 自动扫描注解方式配置的hibernate类文件 -->
 		<property name="packagesToScan">
 			<list>
-				<value>gt.modal</value>
+				<value>com.gt.model</value>
 			</list>
 		</property>
 
@@ -112,7 +112,7 @@ http://www.springframework.org/schema/aop/spring-aop-4.0.xsd
 		</tx:attributes>
 	</tx:advice>
 	<aop:config>
-		<aop:pointcut id="transactionPointcut" expression="execution(* gt.services..*Impl.*(..))" />
+		<aop:pointcut id="transactionPointcut" expression="execution(* com.gt.services..*Impl.*(..))" />
 		<aop:advisor pointcut-ref="transactionPointcut" advice-ref="transactionAdvice" />
 	</aop:config>
 
