@@ -4,6 +4,8 @@ import org.apache.struts2.convention.annotation.Action;
 import org.apache.struts2.convention.annotation.Namespace;
 import org.apache.struts2.convention.annotation.ParentPackage;
 
+import com.opensymphony.xwork2.ActionContext;
+
 @ParentPackage("basePackage")
 @Namespace("/usershop")
 @Action(value = "testaction")
