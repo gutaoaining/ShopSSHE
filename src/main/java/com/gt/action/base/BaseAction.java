@@ -10,8 +10,10 @@ import org.apache.struts2.convention.annotation.ParentPackage;
 import org.apache.struts2.interceptor.ApplicationAware;
 import org.apache.struts2.interceptor.RequestAware;
 import org.apache.struts2.interceptor.SessionAware;
+import org.springframework.beans.factory.annotation.Autowired;
 
 import com.alibaba.fastjson.JSON;
+import com.gt.services.base.AccountServiceI;
 import com.opensymphony.xwork2.ActionSupport;
 import com.opensymphony.xwork2.ModelDriven;
 
@@ -22,6 +24,8 @@ public class BaseAction<T> extends ActionSupport implements RequestAware,Session
 	protected Map<String, Object> request;
     protected Map<String, Object> session;
     protected Map<String, Object> application;
+    @Autowired
+    protected AccountServiceI accountService;
 	public void WriteJson(Object obj){
  
       try {

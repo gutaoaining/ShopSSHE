@@ -8,8 +8,16 @@
 <title>首页</title>
 </head>
 <body>
- <a href="/usershop/testaction!test">查询所有的Account账户</a>
- <c:forEach var="account" items="${accountlist}">
+ <a href="${pageContext.request.contextPath}/usershop/testaction!test.action?id=1&&name=gutao">查询所有的Account账户</a><br>
+ <c:forEach var="account" items="${requestlist}">
+   ${account.id} ${account.login} ${account.name} ${account.pass}<br>
+ </c:forEach>
+ <hr>
+  <c:forEach var="account" items="${sessionlist}">
+   ${account.id} ${account.login} ${account.name} ${account.pass}<br>
+ </c:forEach>
+ <hr>
+  <c:forEach var="account" items="${applicationlist}">
    ${account.id} ${account.login} ${account.name} ${account.pass}<br>
  </c:forEach>
 </body>
