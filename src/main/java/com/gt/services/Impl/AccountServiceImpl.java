@@ -7,7 +7,7 @@ import org.springframework.stereotype.Service;
 import com.gt.model.Account;
 import com.gt.services.base.AccountServiceI;
 
-@Service
+@Service("accountService")
 public class AccountServiceImpl extends BaseServiceImpl<Account> implements AccountServiceI{
        public AccountServiceImpl(){
     	   super();

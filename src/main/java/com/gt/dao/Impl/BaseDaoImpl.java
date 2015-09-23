@@ -1,55 +1,56 @@
 package com.gt.dao.Impl;
 
+import java.lang.reflect.ParameterizedType;
 import java.util.List;
 
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Repository;
 
 import com.gt.dao.base.BaseDaoI;
-@Repository("baseDao")
+
 public class BaseDaoImpl<T> implements BaseDaoI<T> {
+	@Autowired
     private SessionFactory sessionFactory;
-    
-	public SessionFactory getSessionFactory() {
-		return sessionFactory;
-	}
-    @Autowired
-	public void setSessionFactory(SessionFactory sessionFactory) {
-		this.sessionFactory = sessionFactory;
+    private Class clazz;
+	public BaseDaoImpl(){
+		System.out.println("dao----this代表的是当前调用构造方法的对象："+this);
+		System.out.println("dao----获取当前this对象的父类："+this.getClass().getSuperclass());
+		System.out.println("dao----获取当前this对象父类的信息（包括泛型）:"+this.getClass().getGenericSuperclass());
+		ParameterizedType type = (ParameterizedType)this.getClass().getGenericSuperclass();
+		clazz = (Class)type.getActualTypeArguments()[0];
 	}
     public Session getSession(){
     	return sessionFactory.getCurrentSession();
     }
 	@Override
 	public void save(T t) {
-		// TODO Auto-generated method stub
-		
+		this.getSession().save(t);
 	}
 
 	@Override
-	public int update(T t) {
-		// TODO Auto-generated method stub
-		return 0;
+	public void update(T t) {
+		this.getSession().update(t);
+	
 	}
 
 	@Override
-	public int delete(int id) {
+	public  void delete(int id) {
 		// TODO Auto-generated method stub
-		return 0;
+		String hql = "delete "+ clazz.getSimpleName() +" where id=:id";
+		this.getSession().createQuery(hql).setInteger("id", id).executeUpdate();
 	}
 
 	@Override
 	public T get(Class<T> class1,int id) {
-		// TODO Auto-generated method stub
 		return (T)this.getSession().get(class1, id);
 	}
 
 	@Override
 	public List<T> query() {
-		// TODO Auto-generated method stub
-		return null;
+		String hql = "from "+clazz.getSimpleName();
+		List<T> list = this.getSession().createQuery(hql).list();
+		return list;
 	}
 
 }
