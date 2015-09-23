@@ -2,6 +2,7 @@ package com.gt.services.Impl;
 
 import java.lang.reflect.ParameterizedType;
 import java.lang.reflect.Type;
+import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -28,6 +29,22 @@ public class BaseServiceImpl<T> implements BaseServiceI<T> {
 		// TODO Auto-generated method stub
 		T t = baseDao.get(clazz, 1);
 		return t;
+	}
+	@Override
+	public void save(T t) {
+		baseDao.save(t);
+	}
+	@Override
+	public List<T> query() {
+		return baseDao.query();
+	}
+	@Override
+	public void delete(int id) {
+		baseDao.delete(id);
+	}
+	@Override
+	public void update(T t) {
+		baseDao.update(t);
 	}
 
 	

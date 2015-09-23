@@ -144,4 +144,11 @@ public class Product implements java.io.Serializable {
 		this.cid = cid;
 	}
 
+	@Override
+	public String toString() {
+		return "Product [id=" + id + ", name=" + name + ", price=" + price + ", pic=" + pic + ", remark=" + remark
+				+ ", xremark=" + xremark + ", date=" + date + ", commend=" + commend + ", open=" + open + ", cid=" + cid
+				+ "]";
+	}
+
 }

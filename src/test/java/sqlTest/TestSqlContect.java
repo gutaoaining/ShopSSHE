@@ -1,5 +1,7 @@
 package sqlTest;
 
+import java.util.List;
+
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,6 +21,28 @@ public class TestSqlContect {
 	@Test
 	public void test() {
 		System.out.println(accountService.get());
+	}
+	@Test
+	public void testsave() {
+		Account account = new Account();
+		account.setLogin("gutao");
+		account.setName("nibei");
+		account.setPass("1111");
+		accountService.save(account);
+	}
+	@Test
+	public void testupdate() {
+		Account account = new Account();
+		account.setId(3);
+		account.setLogin("gutao");
+		account.setName("顾涛");
+		account.setPass("1111");
+		accountService.update(account);
+	}
+	@Test
+	public void testQuery() {
+		List<Account> list = accountService.query();
+	    System.out.println(list);
 	}
 
 	

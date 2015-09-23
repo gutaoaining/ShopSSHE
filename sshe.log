@@ -2528,3 +2528,218 @@ Caused by: java.lang.ClassCastException: java.lang.Class cannot be cast to java.
 }] of Hibernate SessionFactory for HibernateTransactionManager
 [INFO][2015-09-23 20:33:40,465][org.springframework.context.support.GenericApplicationContext]Closing org.springframework.context.support.GenericApplicationContext@6276ae34: startup date [Wed Sep 23 20:33:34 CST 2015]; root of context hierarchy
 [INFO][2015-09-23 20:33:40,491][com.alibaba.druid.pool.DruidDataSource]{dataSource-1} closed
+[INFO][2015-09-23 20:44:48,899][org.springframework.beans.factory.xml.XmlBeanDefinitionReader]Loading XML bean definitions from URL [file:/F:/webjaeeWorkspace/ShopSSHE/target/classes/spring-hibernate.xml]
+[INFO][2015-09-23 20:44:49,487][org.springframework.beans.factory.xml.XmlBeanDefinitionReader]Loading XML bean definitions from URL [file:/F:/webjaeeWorkspace/ShopSSHE/target/classes/spring.xml]
+[INFO][2015-09-23 20:44:49,861][org.springframework.context.support.GenericApplicationContext]Refreshing org.springframework.context.support.GenericApplicationContext@6276ae34: startup date [Wed Sep 23 20:44:49 CST 2015]; root of context hierarchy
+[INFO][2015-09-23 20:44:50,161][org.springframework.context.support.PropertySourcesPlaceholderConfigurer]Loading properties file from class path resource [config.properties]
+[ERROR][2015-09-23 20:44:50,640][com.alibaba.druid.pool.DruidAbstractDataSource]maxIdle is deprecated
+[INFO][2015-09-23 20:44:50,826][com.alibaba.druid.pool.DruidDataSource]{dataSource-1} inited
+[INFO][2015-09-23 20:44:51,581][org.hibernate.annotations.common.Version]HCANN000001: Hibernate Commons Annotations {4.0.1.Final}
+[INFO][2015-09-23 20:44:51,589][org.hibernate.Version]HHH000412: Hibernate Core {4.1.7.Final}
+[INFO][2015-09-23 20:44:51,591][org.hibernate.cfg.Environment]HHH000206: hibernate.properties not found
+[INFO][2015-09-23 20:44:51,593][org.hibernate.cfg.Environment]HHH000021: Bytecode provider name : javassist
+[INFO][2015-09-23 20:44:52,482][org.hibernate.dialect.Dialect]HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+[INFO][2015-09-23 20:44:52,555][org.hibernate.engine.transaction.internal.TransactionFactoryInitiator]HHH000399: Using default transaction strategy (direct JDBC transactions)
+[INFO][2015-09-23 20:44:52,568][org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory]HHH000397: Using ASTQueryTranslatorFactory
+[INFO][2015-09-23 20:44:53,073][org.hibernate.tool.hbm2ddl.SchemaUpdate]HHH000228: Running hbm2ddl schema update
+[INFO][2015-09-23 20:44:53,073][org.hibernate.tool.hbm2ddl.SchemaUpdate]HHH000102: Fetching database metadata
+[INFO][2015-09-23 20:44:53,078][org.hibernate.tool.hbm2ddl.SchemaUpdate]HHH000396: Updating schema
+[INFO][2015-09-23 20:44:53,121][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000261: Table found: shopping.account
+[INFO][2015-09-23 20:44:53,122][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000037: Columns: [pass, name, id, login]
+[INFO][2015-09-23 20:44:53,122][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000108: Foreign keys: []
+[INFO][2015-09-23 20:44:53,122][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000126: Indexes: [primary]
+[INFO][2015-09-23 20:44:53,137][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000261: Table found: shopping.category
+[INFO][2015-09-23 20:44:53,138][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000037: Columns: [id, type, hot, aid]
+[INFO][2015-09-23 20:44:53,138][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000108: Foreign keys: []
+[INFO][2015-09-23 20:44:53,138][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000126: Indexes: [primary]
+[INFO][2015-09-23 20:44:53,159][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000261: Table found: shopping.product
+[INFO][2015-09-23 20:44:53,159][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000037: Columns: [date, price, name, remark, commend, id, pic, xremark, open, cid]
+[INFO][2015-09-23 20:44:53,160][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000108: Foreign keys: []
+[INFO][2015-09-23 20:44:53,160][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000126: Indexes: [primary]
+[INFO][2015-09-23 20:44:53,161][org.hibernate.tool.hbm2ddl.SchemaUpdate]HHH000232: Schema update complete
+[INFO][2015-09-23 20:44:53,323][org.springframework.orm.hibernate4.HibernateTransactionManager]Using DataSource [{
+	CreateTime:"2015-09-23 20:44:50",
+	ActiveCount:0,
+	PoolingCount:1,
+	CreateCount:1,
+	DestroyCount:0,
+	CloseCount:2,
+	ConnectCount:2,
+	Connections:[
+		{ID:1961129028, ConnectTime:"2015-09-23 20:44:52", UseCount:2, LastActiveTime:"2015-09-23 20:44:53"}
+	]
+}] of Hibernate SessionFactory for HibernateTransactionManager
+[INFO][2015-09-23 20:44:54,832][org.springframework.context.support.GenericApplicationContext]Closing org.springframework.context.support.GenericApplicationContext@6276ae34: startup date [Wed Sep 23 20:44:49 CST 2015]; root of context hierarchy
+[INFO][2015-09-23 20:44:54,892][com.alibaba.druid.pool.DruidDataSource]{dataSource-1} closed
+[INFO][2015-09-23 20:45:57,199][org.springframework.beans.factory.xml.XmlBeanDefinitionReader]Loading XML bean definitions from URL [file:/F:/webjaeeWorkspace/ShopSSHE/target/classes/spring-hibernate.xml]
+[INFO][2015-09-23 20:45:57,702][org.springframework.beans.factory.xml.XmlBeanDefinitionReader]Loading XML bean definitions from URL [file:/F:/webjaeeWorkspace/ShopSSHE/target/classes/spring.xml]
+[INFO][2015-09-23 20:45:58,045][org.springframework.context.support.GenericApplicationContext]Refreshing org.springframework.context.support.GenericApplicationContext@6276ae34: startup date [Wed Sep 23 20:45:58 CST 2015]; root of context hierarchy
+[INFO][2015-09-23 20:45:58,333][org.springframework.context.support.PropertySourcesPlaceholderConfigurer]Loading properties file from class path resource [config.properties]
+[ERROR][2015-09-23 20:45:58,827][com.alibaba.druid.pool.DruidAbstractDataSource]maxIdle is deprecated
+[INFO][2015-09-23 20:45:59,037][com.alibaba.druid.pool.DruidDataSource]{dataSource-1} inited
+[INFO][2015-09-23 20:45:59,843][org.hibernate.annotations.common.Version]HCANN000001: Hibernate Commons Annotations {4.0.1.Final}
+[INFO][2015-09-23 20:45:59,854][org.hibernate.Version]HHH000412: Hibernate Core {4.1.7.Final}
+[INFO][2015-09-23 20:45:59,859][org.hibernate.cfg.Environment]HHH000206: hibernate.properties not found
+[INFO][2015-09-23 20:45:59,862][org.hibernate.cfg.Environment]HHH000021: Bytecode provider name : javassist
+[INFO][2015-09-23 20:46:00,786][org.hibernate.dialect.Dialect]HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+[INFO][2015-09-23 20:46:00,824][org.hibernate.engine.transaction.internal.TransactionFactoryInitiator]HHH000399: Using default transaction strategy (direct JDBC transactions)
+[INFO][2015-09-23 20:46:00,838][org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory]HHH000397: Using ASTQueryTranslatorFactory
+[INFO][2015-09-23 20:46:01,455][org.hibernate.tool.hbm2ddl.SchemaUpdate]HHH000228: Running hbm2ddl schema update
+[INFO][2015-09-23 20:46:01,456][org.hibernate.tool.hbm2ddl.SchemaUpdate]HHH000102: Fetching database metadata
+[INFO][2015-09-23 20:46:01,466][org.hibernate.tool.hbm2ddl.SchemaUpdate]HHH000396: Updating schema
+[INFO][2015-09-23 20:46:01,573][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000261: Table found: shopping.account
+[INFO][2015-09-23 20:46:01,574][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000037: Columns: [pass, name, id, login]
+[INFO][2015-09-23 20:46:01,575][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000108: Foreign keys: []
+[INFO][2015-09-23 20:46:01,575][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000126: Indexes: [primary]
+[INFO][2015-09-23 20:46:01,609][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000261: Table found: shopping.category
+[INFO][2015-09-23 20:46:01,609][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000037: Columns: [id, type, hot, aid]
+[INFO][2015-09-23 20:46:01,609][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000108: Foreign keys: []
+[INFO][2015-09-23 20:46:01,610][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000126: Indexes: [primary]
+[INFO][2015-09-23 20:46:01,654][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000261: Table found: shopping.product
+[INFO][2015-09-23 20:46:01,654][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000037: Columns: [date, price, name, remark, commend, id, pic, xremark, open, cid]
+[INFO][2015-09-23 20:46:01,655][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000108: Foreign keys: []
+[INFO][2015-09-23 20:46:01,655][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000126: Indexes: [primary]
+[INFO][2015-09-23 20:46:01,657][org.hibernate.tool.hbm2ddl.SchemaUpdate]HHH000232: Schema update complete
+[INFO][2015-09-23 20:46:01,953][org.springframework.orm.hibernate4.HibernateTransactionManager]Using DataSource [{
+	CreateTime:"2015-09-23 20:45:58",
+	ActiveCount:0,
+	PoolingCount:1,
+	CreateCount:1,
+	DestroyCount:0,
+	CloseCount:2,
+	ConnectCount:2,
+	Connections:[
+		{ID:1961129028, ConnectTime:"2015-09-23 20:46:00", UseCount:2, LastActiveTime:"2015-09-23 20:46:01"}
+	]
+}] of Hibernate SessionFactory for HibernateTransactionManager
+[INFO][2015-09-23 20:46:03,235][org.springframework.context.support.GenericApplicationContext]Closing org.springframework.context.support.GenericApplicationContext@6276ae34: startup date [Wed Sep 23 20:45:58 CST 2015]; root of context hierarchy
+[INFO][2015-09-23 20:46:03,260][com.alibaba.druid.pool.DruidDataSource]{dataSource-1} closed
+[INFO][2015-09-23 20:47:43,689][org.springframework.beans.factory.xml.XmlBeanDefinitionReader]Loading XML bean definitions from URL [file:/F:/webjaeeWorkspace/ShopSSHE/target/classes/spring-hibernate.xml]
+[INFO][2015-09-23 20:47:44,211][org.springframework.beans.factory.xml.XmlBeanDefinitionReader]Loading XML bean definitions from URL [file:/F:/webjaeeWorkspace/ShopSSHE/target/classes/spring.xml]
+[INFO][2015-09-23 20:47:44,468][org.springframework.context.support.GenericApplicationContext]Refreshing org.springframework.context.support.GenericApplicationContext@6276ae34: startup date [Wed Sep 23 20:47:44 CST 2015]; root of context hierarchy
+[INFO][2015-09-23 20:47:44,759][org.springframework.context.support.PropertySourcesPlaceholderConfigurer]Loading properties file from class path resource [config.properties]
+[ERROR][2015-09-23 20:47:45,146][com.alibaba.druid.pool.DruidAbstractDataSource]maxIdle is deprecated
+[INFO][2015-09-23 20:47:45,344][com.alibaba.druid.pool.DruidDataSource]{dataSource-1} inited
+[INFO][2015-09-23 20:47:45,965][org.hibernate.annotations.common.Version]HCANN000001: Hibernate Commons Annotations {4.0.1.Final}
+[INFO][2015-09-23 20:47:45,983][org.hibernate.Version]HHH000412: Hibernate Core {4.1.7.Final}
+[INFO][2015-09-23 20:47:45,989][org.hibernate.cfg.Environment]HHH000206: hibernate.properties not found
+[INFO][2015-09-23 20:47:45,992][org.hibernate.cfg.Environment]HHH000021: Bytecode provider name : javassist
+[INFO][2015-09-23 20:47:46,815][org.hibernate.dialect.Dialect]HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+[INFO][2015-09-23 20:47:46,849][org.hibernate.engine.transaction.internal.TransactionFactoryInitiator]HHH000399: Using default transaction strategy (direct JDBC transactions)
+[INFO][2015-09-23 20:47:46,866][org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory]HHH000397: Using ASTQueryTranslatorFactory
+[INFO][2015-09-23 20:47:47,316][org.hibernate.tool.hbm2ddl.SchemaUpdate]HHH000228: Running hbm2ddl schema update
+[INFO][2015-09-23 20:47:47,316][org.hibernate.tool.hbm2ddl.SchemaUpdate]HHH000102: Fetching database metadata
+[INFO][2015-09-23 20:47:47,320][org.hibernate.tool.hbm2ddl.SchemaUpdate]HHH000396: Updating schema
+[INFO][2015-09-23 20:47:47,355][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000261: Table found: shopping.account
+[INFO][2015-09-23 20:47:47,356][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000037: Columns: [pass, name, id, login]
+[INFO][2015-09-23 20:47:47,356][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000108: Foreign keys: []
+[INFO][2015-09-23 20:47:47,356][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000126: Indexes: [primary]
+[INFO][2015-09-23 20:47:47,369][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000261: Table found: shopping.category
+[INFO][2015-09-23 20:47:47,369][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000037: Columns: [id, type, hot, aid]
+[INFO][2015-09-23 20:47:47,369][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000108: Foreign keys: []
+[INFO][2015-09-23 20:47:47,370][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000126: Indexes: [primary]
+[INFO][2015-09-23 20:47:47,385][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000261: Table found: shopping.product
+[INFO][2015-09-23 20:47:47,386][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000037: Columns: [date, price, name, remark, commend, id, pic, xremark, open, cid]
+[INFO][2015-09-23 20:47:47,386][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000108: Foreign keys: []
+[INFO][2015-09-23 20:47:47,386][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000126: Indexes: [primary]
+[INFO][2015-09-23 20:47:47,387][org.hibernate.tool.hbm2ddl.SchemaUpdate]HHH000232: Schema update complete
+[INFO][2015-09-23 20:47:47,509][org.springframework.orm.hibernate4.HibernateTransactionManager]Using DataSource [{
+	CreateTime:"2015-09-23 20:47:44",
+	ActiveCount:0,
+	PoolingCount:1,
+	CreateCount:1,
+	DestroyCount:0,
+	CloseCount:2,
+	ConnectCount:2,
+	Connections:[
+		{ID:1961129028, ConnectTime:"2015-09-23 20:47:46", UseCount:2, LastActiveTime:"2015-09-23 20:47:47"}
+	]
+}] of Hibernate SessionFactory for HibernateTransactionManager
+[INFO][2015-09-23 20:47:47,885][org.springframework.context.support.GenericApplicationContext]Closing org.springframework.context.support.GenericApplicationContext@6276ae34: startup date [Wed Sep 23 20:47:44 CST 2015]; root of context hierarchy
+[INFO][2015-09-23 20:47:47,907][com.alibaba.druid.pool.DruidDataSource]{dataSource-1} closed
+[INFO][2015-09-23 20:49:00,971][org.springframework.beans.factory.xml.XmlBeanDefinitionReader]Loading XML bean definitions from URL [file:/F:/webjaeeWorkspace/ShopSSHE/target/classes/spring-hibernate.xml]
+[INFO][2015-09-23 20:49:01,679][org.springframework.beans.factory.xml.XmlBeanDefinitionReader]Loading XML bean definitions from URL [file:/F:/webjaeeWorkspace/ShopSSHE/target/classes/spring.xml]
+[INFO][2015-09-23 20:49:01,987][org.springframework.context.support.GenericApplicationContext]Refreshing org.springframework.context.support.GenericApplicationContext@6276ae34: startup date [Wed Sep 23 20:49:01 CST 2015]; root of context hierarchy
+[INFO][2015-09-23 20:49:02,272][org.springframework.context.support.PropertySourcesPlaceholderConfigurer]Loading properties file from class path resource [config.properties]
+[ERROR][2015-09-23 20:49:02,724][com.alibaba.druid.pool.DruidAbstractDataSource]maxIdle is deprecated
+[INFO][2015-09-23 20:49:03,015][com.alibaba.druid.pool.DruidDataSource]{dataSource-1} inited
+[INFO][2015-09-23 20:49:03,731][org.hibernate.annotations.common.Version]HCANN000001: Hibernate Commons Annotations {4.0.1.Final}
+[INFO][2015-09-23 20:49:03,738][org.hibernate.Version]HHH000412: Hibernate Core {4.1.7.Final}
+[INFO][2015-09-23 20:49:03,741][org.hibernate.cfg.Environment]HHH000206: hibernate.properties not found
+[INFO][2015-09-23 20:49:03,742][org.hibernate.cfg.Environment]HHH000021: Bytecode provider name : javassist
+[INFO][2015-09-23 20:49:05,205][org.hibernate.dialect.Dialect]HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+[INFO][2015-09-23 20:49:05,282][org.hibernate.engine.transaction.internal.TransactionFactoryInitiator]HHH000399: Using default transaction strategy (direct JDBC transactions)
+[INFO][2015-09-23 20:49:05,300][org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory]HHH000397: Using ASTQueryTranslatorFactory
+[INFO][2015-09-23 20:49:06,190][org.hibernate.tool.hbm2ddl.SchemaUpdate]HHH000228: Running hbm2ddl schema update
+[INFO][2015-09-23 20:49:06,191][org.hibernate.tool.hbm2ddl.SchemaUpdate]HHH000102: Fetching database metadata
+[INFO][2015-09-23 20:49:06,204][org.hibernate.tool.hbm2ddl.SchemaUpdate]HHH000396: Updating schema
+[INFO][2015-09-23 20:49:06,379][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000261: Table found: shopping.account
+[INFO][2015-09-23 20:49:06,380][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000037: Columns: [pass, name, id, login]
+[INFO][2015-09-23 20:49:06,380][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000108: Foreign keys: []
+[INFO][2015-09-23 20:49:06,381][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000126: Indexes: [primary]
+[INFO][2015-09-23 20:49:06,442][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000261: Table found: shopping.category
+[INFO][2015-09-23 20:49:06,442][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000037: Columns: [id, type, hot, aid]
+[INFO][2015-09-23 20:49:06,443][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000108: Foreign keys: []
+[INFO][2015-09-23 20:49:06,443][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000126: Indexes: [primary]
+[INFO][2015-09-23 20:49:06,500][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000261: Table found: shopping.product
+[INFO][2015-09-23 20:49:06,501][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000037: Columns: [date, price, name, remark, commend, id, pic, xremark, open, cid]
+[INFO][2015-09-23 20:49:06,501][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000108: Foreign keys: []
+[INFO][2015-09-23 20:49:06,502][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000126: Indexes: [primary]
+[INFO][2015-09-23 20:49:06,504][org.hibernate.tool.hbm2ddl.SchemaUpdate]HHH000232: Schema update complete
+[INFO][2015-09-23 20:49:06,762][org.springframework.orm.hibernate4.HibernateTransactionManager]Using DataSource [{
+	CreateTime:"2015-09-23 20:49:02",
+	ActiveCount:0,
+	PoolingCount:1,
+	CreateCount:1,
+	DestroyCount:0,
+	CloseCount:2,
+	ConnectCount:2,
+	Connections:[
+		{ID:1961129028, ConnectTime:"2015-09-23 20:49:05", UseCount:2, LastActiveTime:"2015-09-23 20:49:06"}
+	]
+}] of Hibernate SessionFactory for HibernateTransactionManager
+[INFO][2015-09-23 20:49:09,059][org.springframework.context.support.GenericApplicationContext]Closing org.springframework.context.support.GenericApplicationContext@6276ae34: startup date [Wed Sep 23 20:49:01 CST 2015]; root of context hierarchy
+[INFO][2015-09-23 20:49:09,088][com.alibaba.druid.pool.DruidDataSource]{dataSource-1} closed
+[INFO][2015-09-23 20:50:41,735][org.springframework.beans.factory.xml.XmlBeanDefinitionReader]Loading XML bean definitions from URL [file:/F:/webjaeeWorkspace/ShopSSHE/target/classes/spring-hibernate.xml]
+[INFO][2015-09-23 20:50:42,342][org.springframework.beans.factory.xml.XmlBeanDefinitionReader]Loading XML bean definitions from URL [file:/F:/webjaeeWorkspace/ShopSSHE/target/classes/spring.xml]
+[INFO][2015-09-23 20:50:42,745][org.springframework.context.support.GenericApplicationContext]Refreshing org.springframework.context.support.GenericApplicationContext@13a57a3b: startup date [Wed Sep 23 20:50:42 CST 2015]; root of context hierarchy
+[INFO][2015-09-23 20:50:43,127][org.springframework.context.support.PropertySourcesPlaceholderConfigurer]Loading properties file from class path resource [config.properties]
+[ERROR][2015-09-23 20:50:43,664][com.alibaba.druid.pool.DruidAbstractDataSource]maxIdle is deprecated
+[INFO][2015-09-23 20:50:43,936][com.alibaba.druid.pool.DruidDataSource]{dataSource-1} inited
+[INFO][2015-09-23 20:50:44,860][org.hibernate.annotations.common.Version]HCANN000001: Hibernate Commons Annotations {4.0.1.Final}
+[INFO][2015-09-23 20:50:44,872][org.hibernate.Version]HHH000412: Hibernate Core {4.1.7.Final}
+[INFO][2015-09-23 20:50:44,877][org.hibernate.cfg.Environment]HHH000206: hibernate.properties not found
+[INFO][2015-09-23 20:50:44,883][org.hibernate.cfg.Environment]HHH000021: Bytecode provider name : javassist
+[INFO][2015-09-23 20:50:46,075][org.hibernate.dialect.Dialect]HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+[INFO][2015-09-23 20:50:46,140][org.hibernate.engine.transaction.internal.TransactionFactoryInitiator]HHH000399: Using default transaction strategy (direct JDBC transactions)
+[INFO][2015-09-23 20:50:46,157][org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory]HHH000397: Using ASTQueryTranslatorFactory
+[INFO][2015-09-23 20:50:47,220][org.hibernate.tool.hbm2ddl.SchemaUpdate]HHH000228: Running hbm2ddl schema update
+[INFO][2015-09-23 20:50:47,220][org.hibernate.tool.hbm2ddl.SchemaUpdate]HHH000102: Fetching database metadata
+[INFO][2015-09-23 20:50:47,232][org.hibernate.tool.hbm2ddl.SchemaUpdate]HHH000396: Updating schema
+[INFO][2015-09-23 20:50:47,323][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000261: Table found: shopping.account
+[INFO][2015-09-23 20:50:47,323][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000037: Columns: [pass, name, id, login]
+[INFO][2015-09-23 20:50:47,324][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000108: Foreign keys: []
+[INFO][2015-09-23 20:50:47,324][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000126: Indexes: [primary]
+[INFO][2015-09-23 20:50:47,363][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000261: Table found: shopping.category
+[INFO][2015-09-23 20:50:47,364][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000037: Columns: [id, type, hot, aid]
+[INFO][2015-09-23 20:50:47,365][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000108: Foreign keys: []
+[INFO][2015-09-23 20:50:47,365][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000126: Indexes: [primary]
+[INFO][2015-09-23 20:50:47,419][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000261: Table found: shopping.product
+[INFO][2015-09-23 20:50:47,420][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000037: Columns: [date, price, name, remark, commend, id, pic, xremark, open, cid]
+[INFO][2015-09-23 20:50:47,420][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000108: Foreign keys: []
+[INFO][2015-09-23 20:50:47,421][org.hibernate.tool.hbm2ddl.TableMetadata]HHH000126: Indexes: [primary]
+[INFO][2015-09-23 20:50:47,423][org.hibernate.tool.hbm2ddl.SchemaUpdate]HHH000232: Schema update complete
+[INFO][2015-09-23 20:50:47,727][org.springframework.orm.hibernate4.HibernateTransactionManager]Using DataSource [{
+	CreateTime:"2015-09-23 20:50:43",
+	ActiveCount:0,
+	PoolingCount:1,
+	CreateCount:1,
+	DestroyCount:0,
+	CloseCount:2,
+	ConnectCount:2,
+	Connections:[
+		{ID:285074186, ConnectTime:"2015-09-23 20:50:45", UseCount:2, LastActiveTime:"2015-09-23 20:50:47"}
+	]
+}] of Hibernate SessionFactory for HibernateTransactionManager
+[INFO][2015-09-23 20:50:50,226][org.springframework.context.support.GenericApplicationContext]Closing org.springframework.context.support.GenericApplicationContext@13a57a3b: startup date [Wed Sep 23 20:50:42 CST 2015]; root of context hierarchy
+[INFO][2015-09-23 20:50:50,252][com.alibaba.druid.pool.DruidDataSource]{dataSource-1} closed

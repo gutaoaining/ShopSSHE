@@ -100,6 +100,7 @@ http://www.springframework.org/schema/aop/spring-aop-4.0.xsd
 			<tx:method name="delete*" />
 			<tx:method name="remove*" />
 			<tx:method name="repaire" />
+			<tx:method name="query" />
 			<tx:method name="deleteAndRepair" />
 
 			<tx:method name="get*" propagation="REQUIRED" read-only="true" />
