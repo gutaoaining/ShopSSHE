@@ -13,7 +13,7 @@ public class BaseServiceImpl<T> implements BaseServiceI<T> {
 	public BaseServiceImpl(){
 		System.out.println("this代表当前构造方法的对象："+this);
 		System.out.println("获取当前this对象的父类："+this.getClass().getSuperclass());
-		System.out.println("获取当前this对象父类的信息（包括范型信息）:"+this.getClass().getGenericInterfaces());
+		System.out.println("获取当前this对象父类的信息（包括范型信息）:"+this.getClass().getGenericSuperclass());
 		System.out.println();
 		ParameterizedType type =(ParameterizedType)this.getClass().getGenericSuperclass();
 		clazz = (Class) type.getActualTypeArguments()[0];
