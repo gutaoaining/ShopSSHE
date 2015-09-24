@@ -45,7 +45,9 @@
 		</global-exception-mappings>
 	</package>
 	<package name="Shopping" extends="struts-default">
-	 
+	    <action name="send_*_*" class="com.gt.action.common.SendAction">
+	       <result name="send">/</result>
+	    </action>
 	</package>
 
 </struts>
