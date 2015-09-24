@@ -46,7 +46,7 @@
 	</package>
 	<package name="Shopping" extends="struts-default">
 	    <action name="send_*_*" class="com.gt.action.common.SendAction">
-	       <result name="send">/</result>
+	       <result name="send">/WEB-INF/{1}/{2}.jsp</result>
 	    </action>
 	</package>
 
