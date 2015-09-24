@@ -15,11 +15,13 @@ import com.opensymphony.xwork2.ActionContext;
 /*
  * namespace的命名要加上斜杠，否则会找不到路径
  * */
-public class TestAction extends BaseAction<Account>{
-     public String test(){
-    	 System.out.println("------获得 请求-----");
-    	 System.out.println(model.getName());
-    	 System.out.println(model.getId());
+public class AccountAction extends BaseAction<Account>{
+     /**
+	 * request,session,application都放在baseAction中
+	 */
+	private static final long serialVersionUID = 1L;
+
+	public String test(){
     	 request.put("requestlist",accountService.query());
     	 session.put("sessionlist",accountService.query());
     	 application.put("applicationlist",accountService.query());
