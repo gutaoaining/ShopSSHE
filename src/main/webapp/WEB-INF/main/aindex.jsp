@@ -5,7 +5,11 @@
 <head>
    <%@ include file="/public/head.jspf"%>
 </head>
-<body>
-
-</body>
+<frameset border="5" rows="150,*">
+  <frame src="top.jsp"/>
+  <frameset border="5" cols="150,*">
+    <frame src="left.jsp"/>
+    <frame src="right.jsp"/>
+  </frameset>
+</frameset>
 </html>

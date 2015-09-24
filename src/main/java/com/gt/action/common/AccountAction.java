@@ -11,7 +11,7 @@ import com.opensymphony.xwork2.ActionContext;
 
 @ParentPackage("basePackage")
 @Namespace("/usershop")
-@Action(value = "testaction",results={@Result(name="index",location="/index.jsp")})
+@Action(value = "accountaction",results={@Result(name="index",location="/index.jsp"),@Result(name="send",location="/WEB-INF/main/aindex.jsp")})
 /*
  * namespace的命名要加上斜杠，否则会找不到路径
  * */
@@ -21,10 +21,14 @@ public class AccountAction extends BaseAction<Account>{
 	 */
 	private static final long serialVersionUID = 1L;
 
-	public String test(){
+	public String query(){
     	 request.put("requestlist",accountService.query());
     	 session.put("sessionlist",accountService.query());
     	 application.put("applicationlist",accountService.query());
     	 return "index";
      }
+	public String aindex(){
+		System.out.println("----------send-----------");
+		return "send";
+	}
 }

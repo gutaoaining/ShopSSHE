@@ -9,7 +9,8 @@
 <%@ include file="/public/head.jspf"%>
 </head>
 <body>
- <a href="${shop}/usershop/testaction!test.action?id=1&&name=gutao">查询所有的Account账户</a><br>
+<a href="${shop}/usershop/accountaction!aindex.action">直接到后台</a>
+ <a href="${shop}/usershop/accountaction!query.action?id=1&&name=gutao">查询所有的Account账户</a><br>
  <c:forEach var="account" items="${requestlist}">
    ${account.id} ${account.login} ${account.name} ${account.pass}<br>
  </c:forEach>
