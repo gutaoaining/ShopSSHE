@@ -5,11 +5,23 @@
 <head>
    <%@ include file="/public/head.jspf"%>
 </head>
-<frameset border="5" rows="150,*">
-  <frame src="send_main_top.action"/>
-  <frameset border="5" cols="150,*">
-    <frame src="send_main_left.action"/>
-    <frame src="send_main_right.action"/>
-  </frameset>
-</frameset>
+<body class="easyui-layout">   
+    <div data-options="region:'north',title:'North Title',split:true" style="height:100px;"></div>   
+    <div data-options="region:'west',title:'管理界面',split:true" style="width:200px;">
+    <div id="aa" class="easyui-accordion" data-options="fit:true,border:false">   
+    <div title="系统设置" data-options="iconCls:'icon-save'">   
+        <h3 style="color:#0099FF;">Accordion for jQuery</h3>   
+        <p>Accordion is a part of easyui framework for jQuery.     
+        It lets you define your accordion component on web page more easily.</p>   
+    </div>   
+    <div title="案列设置" data-options="iconCls:'icon-reload',selected:true">   
+        content2    
+    </div>   
+    <div title="其他设置" data-options="iconCls:'icon-more',selected:true">   
+        content3    
+    </div>   
+    </div>  
+    </div>   
+    <div data-options="region:'center',title:'center title'" style="padding:5px;background:#eee;"></div>   
+</body>  
 </html>
