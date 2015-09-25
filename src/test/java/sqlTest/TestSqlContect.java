@@ -9,13 +9,17 @@ import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 import com.gt.model.Account;
-import com.gt.services.Impl.AccountServiceImpl;
 import com.gt.services.base.AccountServiceI;
-import com.gt.services.base.BaseServiceI;
+
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(locations = { "classpath*:spring-hibernate.xml", "classpath*:spring.xml" })
 public class TestSqlContect {
+	/**
+	 * 一般的aop的是基于动态代理模式，动态代理模式有两种：
+	 * 1.基于jdk Proxy代理，此方法适合有接口的类，
+	 * 2.如果类没有接口则生成的aop就是CGLIB代理
+	 */
 	@Autowired
     protected AccountServiceI accountService;
 	@Test
