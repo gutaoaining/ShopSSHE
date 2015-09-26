@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-9-26 12:20:24 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping package="com.gt.model">
+    <class name="Category" table="category" catalog="shopping">
+        <id name="id" type="java.lang.Integer">
+            <column name="id" />
+            <generator class="identity" />
+        </id>
+        <property name="type" type="string">
+            <column name="type" length="20" />
+        </property>
+        <property name="hot" type="java.lang.Boolean">
+            <column name="hot" />
+        </property>
+    </class>
+</hibernate-mapping>

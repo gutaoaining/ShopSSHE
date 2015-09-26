@@ -65,20 +65,20 @@ http://www.springframework.org/schema/aop/spring-aop-4.0.xsd
 		</property>
 
 		<!-- 自动扫描注解方式配置的hibernate类文件 -->
-		<property name="packagesToScan">
+	   <!-- 	 <property name="packagesToScan">
 			<list>
 				<value>com.gt.model</value>
 			</list>
-		</property>
+		</property> -->
 
 		<!-- 自动扫描hbm方式配置的hibernate文件和.hbm文件 -->
-		<!-- 
+		
 		<property name="mappingDirectoryLocations">
 			<list>
-				<value>classpath:sy/hbm</value>
+				<value>classpath:com/gt/hbm</value>
 			</list>
 		</property>
-		 -->
+		 
 	</bean>
 
 	<!-- 配置事务管理器 -->
@@ -104,12 +104,12 @@ http://www.springframework.org/schema/aop/spring-aop-4.0.xsd
 			<tx:method name="deleteAndRepair" />
 
 			<tx:method name="get*" propagation="REQUIRED" read-only="true" />
-			<tx:method name="find*" propagation="SUPPORTS" />
+			<tx:method name="find*" propagation="REQUIRED" read-only="true" />
 			<tx:method name="load*" propagation="SUPPORTS" />
 			<tx:method name="search*" propagation="SUPPORTS" />
 			<tx:method name="datagrid*" propagation="SUPPORTS" />
 
-			<tx:method name="*" propagation="SUPPORTS" />
+		   <tx:method name="*" propagation="SUPPORTS" /> 
 		</tx:attributes>
 	</tx:advice>
 	<aop:config>

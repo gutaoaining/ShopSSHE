@@ -7,6 +7,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.gt.dao.Impl.BaseDaoImpl;
 import com.gt.dao.base.BaseDaoI;
 import com.gt.services.base.BaseServiceI;
 
@@ -23,7 +24,7 @@ public class BaseServiceImpl<T> implements BaseServiceI<T> {
 		
 	}
 	@Autowired
-	private BaseDaoI<T> baseDao;
+	protected BaseDaoImpl<T> baseDao;
 	@Override
 	public T get() {
 		// TODO Auto-generated method stub
