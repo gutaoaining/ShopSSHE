@@ -14,5 +14,8 @@
         <property name="hot" type="java.lang.Boolean">
             <column name="hot" />
         </property>
+        <many-to-one name="account" class="Account">
+            <column name="aid" />
+        </many-to-one>
     </class>
 </hibernate-mapping>
