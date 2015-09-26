@@ -31,6 +31,13 @@ public class TestCategoryService {
 			System.out.println(category);
 		}
 	}
+	@Test
+	public void testpage() {
+          List<Category> list = categoryService.findCategoryAll("",2,2);
+          for (Category category : list) {
+			System.out.println(category);
+		}
+	}
 
 
 	

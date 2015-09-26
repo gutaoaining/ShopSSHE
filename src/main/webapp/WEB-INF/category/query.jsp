@@ -6,6 +6,6 @@
    <%@ include file="/public/head.jspf"%>
 </head>
 <body>
-left.jsp
+类别管理
 </body>
 </html>
