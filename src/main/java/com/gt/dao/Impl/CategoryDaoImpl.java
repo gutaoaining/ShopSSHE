@@ -28,4 +28,11 @@ public class CategoryDaoImpl extends BaseDaoImpl<Category>implements CategoryDao
 		return getSession().createQuery(hql).setString("type", "%" + type + "%").setFirstResult((page - 1) * size)
 				.setMaxResults(size).list();
 	}
+
+	@Override
+	public Long countAll(String type) {
+		String hql = "select count(c) from Category c where c.type like :type";
+		return (Long)getSession().createQuery(hql).setString("type", "%" + type + "%").uniqueResult();
+		
+	}
 }

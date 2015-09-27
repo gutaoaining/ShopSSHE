@@ -1,5 +1,6 @@
 package sqlTest;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import org.junit.Test;
@@ -34,6 +35,16 @@ public class TestCategoryService {
 	@Test
 	public void testpage() {
           List<Category> list = categoryService.findCategoryAll("",2,2);
+          for (Category category : list) {
+			System.out.println(category);
+		}
+	}
+	@Test
+	public void testpageT() {
+		  Long total = categoryService.countAll("");
+		  System.out.println("-----------------"+total+"---------");
+          List<Category> list = new ArrayList<Category>(); 
+        		list =  categoryService.findCategoryAll("",2,2);
           for (Category category : list) {
 			System.out.println(category);
 		}

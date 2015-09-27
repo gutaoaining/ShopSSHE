@@ -14,6 +14,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 import com.alibaba.fastjson.JSON;
 import com.gt.services.base.AccountServiceI;
+import com.gt.services.base.CategoryServiceI;
 import com.opensymphony.xwork2.ActionSupport;
 import com.opensymphony.xwork2.ModelDriven;
 
@@ -24,8 +25,31 @@ public class BaseAction<T> extends ActionSupport implements RequestAware,Session
 	protected Map<String, Object> request;
     protected Map<String, Object> session;
     protected Map<String, Object> application;
-    @Autowired
+    
+    protected Integer page;
+    protected Integer rows;
+    protected Map<String, Object> map = null;
+    
+	public Integer getPage() {
+		return page;
+	}
+
+	public void setPage(Integer page) {
+		this.page = page;
+	}
+
+	public Integer getRows() {
+		return rows;
+	}
+
+	public void setRows(Integer rows) {
+		this.rows = rows;
+	}
+
+	@Autowired
     protected AccountServiceI accountService;
+	@Autowired
+    protected CategoryServiceI categoryService;
 	public void WriteJson(Object obj){
  
       try {

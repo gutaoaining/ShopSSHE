@@ -29,6 +29,12 @@ public class CategoryServiceImpl extends BaseServiceImpl<Category> implements Ca
 	public List<Category> findCategoryAll(String type, int page, int size) {
 		return categoryDao.findCategoryAll(type,page,size);
 	}
+
+	@Override
+	public Long countAll(String type) {
+		Long total = categoryDao.countAll(type);
+		return total;
+	}
 	
 
 }

@@ -105,7 +105,7 @@ http://www.springframework.org/schema/aop/spring-aop-4.0.xsd
 
 			<tx:method name="get*" propagation="REQUIRED" read-only="true" />
 			<tx:method name="find*" propagation="REQUIRED" read-only="true" />
-			<tx:method name="load*" propagation="SUPPORTS" />
+			<tx:method name="count*" propagation="REQUIRED" read-only="true" />
 			<tx:method name="search*" propagation="SUPPORTS" />
 			<tx:method name="datagrid*" propagation="SUPPORTS" />
 
