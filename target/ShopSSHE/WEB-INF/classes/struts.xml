@@ -44,14 +44,10 @@
 			<exception-mapping result="strutsException" exception="java.lang.Exception"></exception-mapping>
 		</global-exception-mappings>
 	</package>
-	<package name="gutao" extends="struts-default">
-	 
-	    <action name="updata" class="sy.action.UploadAction">
-	     	<!-- 动态设置Action的属性值 -->
-			<param name="savePath">/filetemp</param>
-			<!-- 配置Struts 2默认的视图页面 -->
-			<result>/user/succ.jsp</result>	
-        </action>
+	<package name="Shopping" extends="struts-default">
+	    <action name="send_*_*" class="com.gt.action.common.SendAction">
+	       <result name="send">/WEB-INF/{1}/{2}.jsp</result>
+	    </action>
 	</package>
 
 </struts>

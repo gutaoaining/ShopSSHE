@@ -12,6 +12,7 @@
 <body>
 <a href="${shop}/usershop/send_main_aindex.action">直接到后台ui</a>
 <a href="${shop}/usershop/send_main_index.action">直接到后台fremeset</a>
+<a href="${shop}/usershop/categoryaction!query.action?type=''&&page=1&&rows=4">json测试</a>
  <a href="${shop}/usershop/accountaction!query.action?id=1&&name=gutao">查询所有的Account账户</a><br>
  <c:forEach var="account" items="${requestlist}">
    ${account.id} ${account.login} ${account.name} ${account.pass}<br>

@@ -10,9 +10,9 @@ import org.apache.struts2.convention.annotation.ParentPackage;
 import org.apache.struts2.interceptor.ApplicationAware;
 import org.apache.struts2.interceptor.RequestAware;
 import org.apache.struts2.interceptor.SessionAware;
+import org.codehaus.jackson.map.ObjectMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 
-import com.alibaba.fastjson.JSON;
 import com.gt.services.base.AccountServiceI;
 import com.gt.services.base.CategoryServiceI;
 import com.opensymphony.xwork2.ActionSupport;
@@ -53,8 +53,10 @@ public class BaseAction<T> extends ActionSupport implements RequestAware,Session
 	public void WriteJson(Object obj){
  
       try {
-        String json = JSON.toJSONStringWithDateFormat(obj , "yyyy-MM-dd HH:mm:ss");
+    	ObjectMapper objectMapper = new ObjectMapper();
+        String json = objectMapper.writeValueAsString(obj);
         ServletActionContext.getResponse().setContentType("text/html;charset=utf-8");
+        System.out.println(json);
 		ServletActionContext.getResponse().getWriter().write(json);
 		ServletActionContext.getResponse().getWriter().flush();
 		ServletActionContext.getResponse().getWriter().close();

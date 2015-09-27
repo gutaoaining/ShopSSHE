@@ -65,20 +65,20 @@ http://www.springframework.org/schema/aop/spring-aop-4.0.xsd
 		</property>
 
 		<!-- 自动扫描注解方式配置的hibernate类文件 -->
-		<property name="packagesToScan">
+	   <!-- 	 <property name="packagesToScan">
 			<list>
-				<value>gt.modal</value>
+				<value>com.gt.model</value>
 			</list>
-		</property>
+		</property> -->
 
 		<!-- 自动扫描hbm方式配置的hibernate文件和.hbm文件 -->
-		<!-- 
+		
 		<property name="mappingDirectoryLocations">
 			<list>
-				<value>classpath:sy/hbm</value>
+				<value>classpath:com/gt/hbm</value>
 			</list>
 		</property>
-		 -->
+		 
 	</bean>
 
 	<!-- 配置事务管理器 -->
@@ -86,9 +86,9 @@ http://www.springframework.org/schema/aop/spring-aop-4.0.xsd
 		<property name="sessionFactory" ref="sessionFactory"></property>
 	</bean>
 
-	<!-- 注解方式配置事物 -->
+	<!-- 注解方式配置事物 
 	 <tx:annotation-driven transaction-manager="transactionManager" />
-   
+   -->
 	<!-- 拦截器方式配置事物 -->
 	<tx:advice id="transactionAdvice" transaction-manager="transactionManager">
 		<tx:attributes>
@@ -100,19 +100,20 @@ http://www.springframework.org/schema/aop/spring-aop-4.0.xsd
 			<tx:method name="delete*" />
 			<tx:method name="remove*" />
 			<tx:method name="repaire" />
+			<tx:method name="query" />
 			<tx:method name="deleteAndRepair" />
 
-			<tx:method name="get*" propagation="SUPPORTS" />
-			<tx:method name="find*" propagation="SUPPORTS" />
-			<tx:method name="load*" propagation="SUPPORTS" />
+			<tx:method name="get*" propagation="REQUIRED" read-only="true" />
+			<tx:method name="find*" propagation="REQUIRED" read-only="true" />
+			<tx:method name="count*" propagation="REQUIRED" read-only="true" />
 			<tx:method name="search*" propagation="SUPPORTS" />
 			<tx:method name="datagrid*" propagation="SUPPORTS" />
 
-			<tx:method name="*" propagation="SUPPORTS" />
+		   <tx:method name="*" propagation="SUPPORTS" /> 
 		</tx:attributes>
 	</tx:advice>
 	<aop:config>
-		<aop:pointcut id="transactionPointcut" expression="execution(* gt.services..*Impl.*(..))" />
+		<aop:pointcut id="transactionPointcut" expression="execution(* com.gt.services..*Impl.*(..))" />
 		<aop:advisor pointcut-ref="transactionPointcut" advice-ref="transactionAdvice" />
 	</aop:config>
 
