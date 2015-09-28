@@ -12,7 +12,22 @@
     		    pagination : true,
     		    queryParams: {
     				type: '',
-    			}, 		    
+    			},
+    			toolbar: [{
+        			text : "修改类别",
+    				iconCls: 'icon-edit',
+    				handler: function(){alert('编辑按钮')}
+    			},'-',{
+        			text : '添加类别',
+    				iconCls: 'icon-add',
+    				handler: function(){alert('添加按钮')}
+    			},'-',{
+        			text : '删除类别',
+    				iconCls: 'icon-remove',
+    				handler: function(){alert('删除按钮')}
+    			},'-',{
+        			text : '<input id="searchType" name="searchType">'
+    			}], 		    
     		    pageSize : 3,
     		    pageList : [3,6,9,12,15],
     		    columns:[[    
@@ -29,6 +44,12 @@
     	 
     		    ]]    
     	});   
+     	$('#searchType').searchbox({ 
+     		searcher:function(value,name){ 
+     			alert(value + "," + name) 
+     			}, 
+     			prompt:'请输入查询类别' 
+        }); 
      });
    </script>
 </head>
