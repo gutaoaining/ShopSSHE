@@ -28,6 +28,7 @@ public class BaseAction<T> extends ActionSupport implements RequestAware,Session
     
     protected Integer page;
     protected Integer rows;
+    protected String ids;
     protected Map<String, Object> map = null;
     
 	public Integer getPage() {
@@ -44,6 +45,14 @@ public class BaseAction<T> extends ActionSupport implements RequestAware,Session
 
 	public void setRows(Integer rows) {
 		this.rows = rows;
+	}
+
+	public String getIds() {
+		return ids;
+	}
+
+	public void setIds(String ids) {
+		this.ids = ids;
 	}
 
 	@Autowired

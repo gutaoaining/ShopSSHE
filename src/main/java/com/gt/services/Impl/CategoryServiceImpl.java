@@ -35,6 +35,14 @@ public class CategoryServiceImpl extends BaseServiceImpl<Category> implements Ca
 		Long total = categoryDao.countAll(type);
 		return total;
 	}
+
+	@Override
+	public void deleteCategory(String ids) {
+		String hql = "delete Category c where c.id in ("+ids+")";
+		System.out.println("获得到的hql语句："+hql);
+		categoryDao.deleteMore(hql);
+		
+	}
 	
 
 }

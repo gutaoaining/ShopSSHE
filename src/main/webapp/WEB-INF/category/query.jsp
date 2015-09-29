@@ -27,13 +27,33 @@
         			text : '删除类别',
     				iconCls: 'icon-remove',
     				handler: function(){
+        				var ids = [];
                         var rows = $("#categoryGrid").datagrid('getSelections');
                         if(rows.length>0){
-                        	$.messager.confirm('确认','您确认想要删除记录吗？',function(del){    
-                        	    if (del){    
-                        	        alert('确认删除');    
-                        	    }    
-                        	}); 
+                        	 var idkey = [];
+                         	$.messager.confirm('确认','您确认想要删除记录吗？',function(del){        
+                         	    	 if (del){    
+                               	       for(var i =0 ; i<rows.length ; i++){
+                                             idkey.push(rows[i].id);
+                                          }   
+                                          var key = idkey.join(',');
+                                          console.info(key);
+                                          $.ajax({
+                                             url : 'categoryaction!deleteCategory.action',
+                                             type : 'POST',
+                                             data : {ids : key},
+                                             success : function(data){
+                                                  if(data){
+                                                      alert("成功"+data);
+                                                  }
+                                             },
+                                             error : function(){
+
+                                             }
+                                          });
+                               	    }    
+                         	        
+                         	}); 
                         }else{
                         	$.messager.alert({
                         		title : '错误提示',

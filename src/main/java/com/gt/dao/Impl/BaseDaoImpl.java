@@ -52,5 +52,9 @@ public class BaseDaoImpl<T> implements BaseDaoI<T> {
 		List<T> list = this.getSession().createQuery(hql).list();
 		return list;
 	}
+	@Override
+	public void deleteMore(String hql) {
+		this.getSession().createQuery(hql).executeUpdate();
+	}
 
 }

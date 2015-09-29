@@ -10,4 +10,6 @@ public interface CategoryServiceI extends BaseServiceI<Category> {
 	public List<Category> findCategoryAll(String type, int page, int size);
 
 	public Long countAll(String type);
+	
+	public void deleteCategory(String ids);
 }

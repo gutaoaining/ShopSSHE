@@ -38,5 +38,9 @@ public class CategoryAction extends BaseAction<Category>{
     	WriteJson(map);
         
      }
+	 public void deleteCategory(){
+        System.out.println(ids);
+        categoryService.deleteCategory(ids);
+     }
 	
 }
