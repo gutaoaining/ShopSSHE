@@ -12,4 +12,6 @@ public interface CategoryServiceI extends BaseServiceI<Category> {
 	public Long countAll(String type);
 	
 	public void deleteCategory(String ids);
+	
+	public void deleteCategoryArray(List<Integer> ids);
 }

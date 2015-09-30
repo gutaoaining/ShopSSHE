@@ -12,6 +12,4 @@ public interface CategoryDaoI extends BaseDaoI<Category> {
 	public Long countAll(String type);
 
 	
-
-	
 }

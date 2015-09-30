@@ -35,4 +35,5 @@ public class CategoryDaoImpl extends BaseDaoImpl<Category>implements CategoryDao
 		return (Long)getSession().createQuery(hql).setString("type", "%" + type + "%").uniqueResult();
 		
 	}
+	
 }

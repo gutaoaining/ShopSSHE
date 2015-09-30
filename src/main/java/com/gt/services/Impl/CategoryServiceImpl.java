@@ -43,6 +43,11 @@ public class CategoryServiceImpl extends BaseServiceImpl<Category> implements Ca
 		categoryDao.deleteMore(hql);
 		
 	}
+
+	@Override
+	public void deleteCategoryArray(List<Integer> ids) {
+		  categoryDao.deleteArray(ids);
+	}
 	
 
 }

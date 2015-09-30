@@ -56,5 +56,15 @@ public class BaseDaoImpl<T> implements BaseDaoI<T> {
 	public void deleteMore(String hql) {
 		this.getSession().createQuery(hql).executeUpdate();
 	}
+	@Override
+	public void deleteArray(List<Integer> ids) {
+		String sql = "delete from "+clazz.getSimpleName()+" where id in (";
+	     for (Integer id : ids) {
+			sql+=id+",";
+		 }
+	     String hql=sql.substring(0, sql.length()-1);
+	     hql+=")";
+	     getSession().createQuery(hql).executeUpdate();
+	    }
 
 }

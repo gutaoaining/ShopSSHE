@@ -29,6 +29,9 @@ public class BaseAction<T> extends ActionSupport implements RequestAware,Session
     
     protected Integer page;
     protected Integer rows;
+    /**
+     * 通过前台提交的ids字符串，用字符串的形式接收处理
+     * */
     protected String ids;
     
     
@@ -40,7 +43,9 @@ public class BaseAction<T> extends ActionSupport implements RequestAware,Session
 		this.ids = ids;
 	}
 
-
+   /**
+    * 通过前台提交的数据（$.param序列化）直接用ArrayList接受
+    */
 	protected ArrayList<Integer> idArray;
      
 

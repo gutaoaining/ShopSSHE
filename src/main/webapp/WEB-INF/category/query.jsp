@@ -41,19 +41,18 @@
                                          var key = idkey.join(',');
                                          console.info("字符串："+key);
                                           var url = "categoryaction!deleteCategoryArray.action";
-                                          var url1 = "categoryaction!deleteCategory.action";
+                                          var url1 = "categoryaction!deleteCategory.action";//字符串传递
                                           $.ajax({
                                              url : url,
                                              type : 'POST',
                                              async : true,
                                              data : params,
+                                             dataType:'json',
                                              success : function(data){
-                                                  if(data){
-                                                      alert("成功"+data);
+                                                 console.info(data.msg);
+                                                  if(data.msg){
+                                                	  $('#categoryGrid').datagrid('reload'); 
                                                   }
-                                             },
-                                             error : function(){
-
                                              }
                                           });
                                	    }    

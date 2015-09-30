@@ -36,14 +36,14 @@ public class CategoryAction extends BaseAction<Category>{
     	map.put("total", total);
     	map.put("rows", list);
     	WriteJson(map);
-        
      }
 	 public void deleteCategory(){
-        System.out.println(ids);
-       // categoryService.deleteCategory(ids);
+       categoryService.deleteCategory(ids);
      }
 	 public void deleteCategoryArray(){
-	        System.out.println(idArray);
-	        
-	     }
+	    categoryService.deleteCategoryArray(idArray);
+	    map = new HashMap<String ,Object>();
+	    map.put("msg", true);
+	    WriteJson(map);
+	}
 }

@@ -14,4 +14,6 @@ public interface BaseDaoI<T> {
 	 public T get(Class<T> class1, int id);
 	 
 	 public void deleteMore(String hql);
+
+	 public void deleteArray(List<Integer> ids);
 }
