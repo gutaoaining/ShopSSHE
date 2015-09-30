@@ -40,7 +40,10 @@ public class CategoryAction extends BaseAction<Category>{
      }
 	 public void deleteCategory(){
         System.out.println(ids);
-        categoryService.deleteCategory(ids);
+       // categoryService.deleteCategory(ids);
      }
-	
+	 public void deleteCategoryArray(){
+	        System.out.println(idArray);
+	        
+	     }
 }

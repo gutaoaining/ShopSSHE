@@ -27,21 +27,26 @@
         			text : '删除类别',
     				iconCls: 'icon-remove',
     				handler: function(){
-        				var ids = [];
                         var rows = $("#categoryGrid").datagrid('getSelections');
                         if(rows.length>0){
-                        	 var idkey = [];
+                        	var idkey = [];
                          	$.messager.confirm('确认','您确认想要删除记录吗？',function(del){        
                          	    	 if (del){    
                                	       for(var i =0 ; i<rows.length ; i++){
                                              idkey.push(rows[i].id);
-                                          }   
-                                          var key = idkey.join(',');
-                                          console.info(key);
+                                          }  
+                               	         console.info(idkey);
+                               	         var params = $.param({'idArray':idkey},true);
+                               	         console.info("params:"+params);
+                                         var key = idkey.join(',');
+                                         console.info("字符串："+key);
+                                          var url = "categoryaction!deleteCategoryArray.action";
+                                          var url1 = "categoryaction!deleteCategory.action";
                                           $.ajax({
-                                             url : 'categoryaction!deleteCategory.action',
+                                             url : url,
                                              type : 'POST',
-                                             data : {ids : key},
+                                             async : true,
+                                             data : params,
                                              success : function(data){
                                                   if(data){
                                                       alert("成功"+data);

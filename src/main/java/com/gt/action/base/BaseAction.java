@@ -2,6 +2,7 @@ package com.gt.action.base;
 
 import java.io.IOException;
 import java.lang.reflect.ParameterizedType;
+import java.util.ArrayList;
 import java.util.Map;
 
 import org.apache.struts2.ServletActionContext;
@@ -29,7 +30,31 @@ public class BaseAction<T> extends ActionSupport implements RequestAware,Session
     protected Integer page;
     protected Integer rows;
     protected String ids;
-    protected Map<String, Object> map = null;
+    
+    
+    public String getIds() {
+		return ids;
+	}
+
+	public void setIds(String ids) {
+		this.ids = ids;
+	}
+
+
+	protected ArrayList<Integer> idArray;
+     
+
+
+	public ArrayList<Integer> getIdArray() {
+		return idArray;
+	}
+
+	public void setIdArray(ArrayList<Integer> idArray) {
+		this.idArray = idArray;
+	}
+
+
+	protected Map<String, Object> map = null;
     
 	public Integer getPage() {
 		return page;
@@ -47,13 +72,6 @@ public class BaseAction<T> extends ActionSupport implements RequestAware,Session
 		this.rows = rows;
 	}
 
-	public String getIds() {
-		return ids;
-	}
-
-	public void setIds(String ids) {
-		this.ids = ids;
-	}
 
 	@Autowired
     protected AccountServiceI accountService;
