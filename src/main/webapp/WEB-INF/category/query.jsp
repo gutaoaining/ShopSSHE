@@ -51,6 +51,7 @@
                                              success : function(data){
                                                  console.info(data.msg);
                                                   if(data.msg){
+                                                	  $('#categoryGrid').datagrid('clearSelections');
                                                 	  $('#categoryGrid').datagrid('reload'); 
                                                   }
                                              }
