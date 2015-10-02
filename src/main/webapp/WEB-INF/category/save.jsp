@@ -15,7 +15,7 @@
         	 $('#add_category_form').form('enableValidation');
             if($('#add_category_form').form('validate')){
             	$('#add_category_form').form('submit', {    
-            	    url:'categoryaction!saCategory.action',      
+            	    url:'categoryaction!saveCategory.action',      
             	    success : function(data){  
                 	    var json = eval("("+data+")");   
             	    	if(json.msg){

@@ -7,6 +7,10 @@
    <script type="text/javascript">
      $(function(){
          var dg =  parent.$('iframe[title="类别管理"]').get(0).contentWindow.$("#categoryGrid");   
+         $('input[name=type]').validatebox({    
+             required: true,    
+             missingMessage : '类型不能为空！' 
+         }); 
          $('#cc').combobox({    
         	    url:'accountaction!queryAccount.action',  
         	    panelHeight : 'auto',
@@ -27,10 +31,10 @@
         $("#update_category_btn").on('click',function(){
             if($('#update_category_form').form('validate')){
             	$('#update_category_form').form('submit', {    
-            	    url:'categoryaction!upCategory.action',      
+            	    url:'categoryaction!updateCategory.action',      
             	    success : function(data){  
                 	    var json = eval("("+data+")");   
-            	    	if(json.msg){
+            	    	if(json.msg){           	
             	    	  parent.$('#win').window('close');
             	    	  //通过穿换成dom对象从而拿到相应的节点元素，这是在浏览器不兼容是一种很有效的方法  
                       	  dg.datagrid('reload'); 

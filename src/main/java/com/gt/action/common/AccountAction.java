@@ -28,7 +28,7 @@ public class AccountAction extends BaseAction<Account>{
     	 return "index";
      }
 	public void queryAccount(){
-       WriteJson(accountService.query());
+       WriteJson(accountService.queryAccount());
     }
 	
 }

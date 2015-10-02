@@ -25,7 +25,10 @@
           					    width : 340,    
           					    height : 250,
           					    title : '修改类别', 
-          					    content : '<iframe  src="send_category_update.action" frameborder="0" width="100%" height="100%"/>'
+          					    content : '<iframe  src="send_category_update.action" frameborder="0" width="100%" height="100%"/>',
+          					    onClose : function(){
+          					    	clearRow();
+              					}
           					});  
     			         }else{
     			        	 $.messager.alert({
@@ -44,8 +47,12 @@
     					    width : 340,    
     					    height : 180,
     					    title : '添加类别', 
-    					    content : '<iframe  src="send_category_save.action" frameborder="0" width="100%" height="100%"/>'
-    					});  
+    					    content : '<iframe  src="send_category_save.action" frameborder="0" width="100%" height="100%"/>',
+    					    onClose : function(){
+    					    	clearRow();
+        				    }
+                      
+    	    		});  
         		   }
     			},'-',{
         			text : '删除类别',
@@ -58,29 +65,29 @@
                          	    	 if (del){    
                                	       for(var i =0 ; i<rows.length ; i++){
                                              idkey.push(rows[i].id);
-                                          }  
-                               	         console.info(idkey);
-                               	         var params = $.param({'idArray':idkey},true);
-                               	         console.info("params:"+params);
-                                         var key = idkey.join(',');
-                                         console.info("字符串："+key);
-                                          var url = "categoryaction!deleteCategoryArray.action";
-                                          var url1 = "categoryaction!deleteCategory.action";//字符串传递
-                                          $.ajax({
-                                             url : url1,
-                                             type : 'POST',
-                                             async : true,
-                                             data : {ids : key},
-                                             dataType:'json',
-                                             success : function(data){
-                                                 //console.info(data);
-                                                 //后台通过strean的方式返回
-                                                  if(data.msg){
-                                                	  $('#categoryGrid').datagrid('clearSelections');
-                                                	  $('#categoryGrid').datagrid('reload'); 
-                                                  }
+                                       }  
+                          	         console.info(idkey);
+                          	         var params = $.param({'idArray':idkey},true);
+                          	         console.info("params:"+params);
+                                     var key = idkey.join(',');
+                                     console.info("字符串："+key);
+                                     var url = "categoryaction!deleteCategoryArray.action";
+                                     var url1 = "categoryaction!deleteCategory.action";//字符串传递
+                                     $.ajax({
+                                        url : url1,
+                                        type : 'POST',
+                                        async : true,
+                                        data : {ids : key},
+                                        dataType:'json',
+                                        success : function(data){
+                                            //console.info(data);
+                                            //后台通过strean的方式返回
+                                             if(data.msg){
+                                           	  $('#categoryGrid').datagrid('clearSelections');
+                                           	  $('#categoryGrid').datagrid('reload'); 
                                              }
-                                          });
+                                        }
+                                     });
                                	    }    
                          	        
                          	}); 
@@ -128,6 +135,9 @@
      			prompt:'请输入查询类别' 
         }); 
      });
+     function clearRow(){
+    	 $('#categoryGrid').datagrid('clearSelections');
+      }
    </script>
 </head>
 <body>
