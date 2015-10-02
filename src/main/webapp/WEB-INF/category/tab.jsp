@@ -6,6 +6,8 @@
    <%@ include file="/public/head.jspf"%>
 </head>
 <body>
-
+ <form action="">
+ 
+ </form>
 </body>
 </html>
