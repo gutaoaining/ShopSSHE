@@ -48,6 +48,12 @@ public class CategoryAction extends BaseAction<Category> {
 	// inputStream = new ByteArrayInputStream("true".getBytes());
 	// return "stream";
 	// }
+	public void saCategory() {
+		System.out.println(model.getType());
+		System.out.println(model.getHot());
+		categoryService.save(model);
+		map();
+	}
 	public void deleteCategory() {
 		categoryService.deleteCategory(ids);
 		map();

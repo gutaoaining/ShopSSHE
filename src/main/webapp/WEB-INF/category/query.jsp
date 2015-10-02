@@ -24,8 +24,8 @@
     				iconCls: 'icon-add',
     				handler: function(){
     					parent.$('#win').window({    
-    					    width : 300,    
-    					    height : 200,
+    					    width : 340,    
+    					    height : 180,
     					    title : '添加类别', 
     					    content : '<iframe  src="send_category_save.action" frameborder="0" width="100%" height="100%"/>'
     					});  
