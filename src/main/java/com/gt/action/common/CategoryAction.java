@@ -31,11 +31,8 @@ public class CategoryAction extends BaseAction<Category> {
 	public void query() {
 		map = new HashMap<String, Object>();
 		Long total = categoryService.countAll(model.getType());
-		System.out.println("type的值为：" + model.getType());
-		System.out.println(total);
 		List<Category> list = new ArrayList<Category>();
 		list = categoryService.findCategoryAll(model.getType(), page, rows);
-		System.out.println(list);
 		map.put("total", total);
 		map.put("rows", list);
 		WriteJson(map);
@@ -49,15 +46,10 @@ public class CategoryAction extends BaseAction<Category> {
 	// return "stream";
 	// }
 	public void saveCategory() {
-		System.out.println(model.getType());
-		System.out.println(model.getHot());
 		categoryService.save(model);
 		map();
 	}
 	public void updateCategory() {
-		System.out.println(model.getId());
-		System.out.println(model.getType());
-		System.out.println(model.getHot());
 		categoryService.update(model);
 		map();
 	}

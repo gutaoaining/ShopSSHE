@@ -2,8 +2,10 @@ package com.gt.services.Impl;
 
 
 
+import java.util.ArrayList;
 import java.util.List;
 
+import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -39,7 +41,6 @@ public class CategoryServiceImpl extends BaseServiceImpl<Category> implements Ca
 	@Override
 	public void deleteCategory(String ids) {
 		String hql = "delete Category c where c.id in ("+ids+")";
-		System.out.println("获得到的hql语句："+hql);
 		categoryDao.deleteMore(hql);
 		
 	}
