@@ -56,6 +56,10 @@ public class BaseDaoImpl<T> implements BaseDaoI<T> {
 	public void deleteMore(String hql) {
 		this.getSession().createQuery(hql).executeUpdate();
 	}
+	/**
+	 * 从前台获取到list让后进行删除，但是我个人喜欢上面的方式，因为不需要循环，直接删除，可以降低处理时间
+	 * 而这种方式比较适合当有多条记录要插入，这种方式是比较合适的
+	 */
 	@Override
 	public void deleteArray(List<Integer> ids) {
 		String sql = "delete from "+clazz.getSimpleName()+" where id in (";

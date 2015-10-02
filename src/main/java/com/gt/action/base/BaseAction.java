@@ -1,6 +1,7 @@
 package com.gt.action.base;
 
 import java.io.IOException;
+import java.io.InputStream;
 import java.lang.reflect.ParameterizedType;
 import java.util.ArrayList;
 import java.util.Map;
@@ -33,9 +34,20 @@ public class BaseAction<T> extends ActionSupport implements RequestAware,Session
      * 通过前台提交的ids字符串，用字符串的形式接收处理
      * */
     protected String ids;
+    protected InputStream inputStream;
     
     
-    public String getIds() {
+    
+
+	public InputStream getInputStream() {
+		return inputStream;
+	}
+
+	public void setInputStream(InputStream inputStream) {
+		this.inputStream = inputStream;
+	}
+
+	public String getIds() {
 		return ids;
 	}
 

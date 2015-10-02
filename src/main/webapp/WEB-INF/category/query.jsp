@@ -43,13 +43,14 @@
                                           var url = "categoryaction!deleteCategoryArray.action";
                                           var url1 = "categoryaction!deleteCategory.action";//字符串传递
                                           $.ajax({
-                                             url : url,
+                                             url : url1,
                                              type : 'POST',
                                              async : true,
-                                             data : params,
+                                             data : {ids : key},
                                              dataType:'json',
                                              success : function(data){
-                                                 console.info(data.msg);
+                                                 //console.info(data);
+                                                 //后台通过strean的方式返回
                                                   if(data.msg){
                                                 	  $('#categoryGrid').datagrid('clearSelections');
                                                 	  $('#categoryGrid').datagrid('reload'); 
