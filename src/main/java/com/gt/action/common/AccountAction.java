@@ -27,5 +27,8 @@ public class AccountAction extends BaseAction<Account>{
     	 application.put("applicationlist",accountService.query());
     	 return "index";
      }
+	public void queryAccount(){
+       WriteJson(accountService.query());
+    }
 	
 }

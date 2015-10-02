@@ -54,6 +54,13 @@ public class CategoryAction extends BaseAction<Category> {
 		categoryService.save(model);
 		map();
 	}
+	public void upCategory() {
+		System.out.println(model.getId());
+		System.out.println(model.getType());
+		System.out.println(model.getHot());
+		categoryService.update(model);
+		map();
+	}
 	public void deleteCategory() {
 		categoryService.deleteCategory(ids);
 		map();

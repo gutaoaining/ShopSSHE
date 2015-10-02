@@ -13,6 +13,7 @@ public class AccountServiceImpl extends BaseServiceImpl<Account> implements Acco
 	public  AccountServiceImpl() {
 	    super();
 	}
+
 	
 
 }
