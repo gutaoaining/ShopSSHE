@@ -18,6 +18,7 @@ import com.gt.services.base.CategoryServiceI;
 public class CategoryServiceImpl extends BaseServiceImpl<Category> implements CategoryServiceI{
     @Autowired
 	private CategoryDaoI categoryDao;
+    
 	public  CategoryServiceImpl() {
 	    super();
 	}
@@ -29,6 +30,22 @@ public class CategoryServiceImpl extends BaseServiceImpl<Category> implements Ca
 
 	@Override
 	public List<Category> findCategoryAll(String type, int page, int size) {
+		
+//		List<Category> list = new ArrayList<Category>(); 
+//		list = categoryDao.findCategoryAll(type,page,size);
+//		List<Category> clist = new ArrayList<Category>();
+//        for (Category category : list) {
+//			Category c = new Category();
+//			BeanUtils.copyProperties(category, c);
+//			c.getAccount().setPass("");
+//			clist.add(c);
+//			System.out.println(c);
+//		}
+//        System.out.println("clist");
+//        for (Category category : clist) {
+//        	System.out.println("clist");
+//			System.out.println(category);
+//		}
 		return categoryDao.findCategoryAll(type,page,size);
 	}
 
@@ -41,6 +58,7 @@ public class CategoryServiceImpl extends BaseServiceImpl<Category> implements Ca
 	@Override
 	public void deleteCategory(String ids) {
 		String hql = "delete Category c where c.id in ("+ids+")";
+		System.out.println("获得到的hql语句："+hql);
 		categoryDao.deleteMore(hql);
 		
 	}

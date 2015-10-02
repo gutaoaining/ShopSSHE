@@ -5,6 +5,7 @@ import java.util.List;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
+import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
@@ -49,7 +50,20 @@ public class TestCategoryService {
 			System.out.println(category);
 		}
 	}
-
+	@Test
+    public void testCategoryCopy(){
+    	List<Category> list = categoryService.findCategoryAll("", 1, 5);
+    	List<Category> clist = new ArrayList<Category>();
+        for (Category category : list) {
+			category.getAccount().setPass("***");
+			clist.add(category);
+		}
+        System.out.println("clist");
+        for (Category category : clist) {
+        	System.out.println("clist");
+			System.out.println(category);
+		}
+    }
 
 	
 }
