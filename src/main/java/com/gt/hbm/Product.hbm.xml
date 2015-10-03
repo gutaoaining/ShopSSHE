@@ -32,8 +32,8 @@
         <property name="open" type="java.lang.Boolean">
             <column name="open" />
         </property>
-        <property name="cid" type="java.lang.Integer">
+        <many-to-one name="category" class="Category">
             <column name="cid" />
-        </property>
+        </many-to-one>
     </class>
 </hibernate-mapping>

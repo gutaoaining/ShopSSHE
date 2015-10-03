@@ -18,7 +18,7 @@ public class Product implements java.io.Serializable {
 	private Date date;
 	private Boolean commend;
 	private Boolean open;
-	private Integer cid;
+	private Category category;
 
 	public Product() {
 	}
@@ -28,7 +28,7 @@ public class Product implements java.io.Serializable {
 	}
 
 	public Product(String name, BigDecimal price, String pic, String remark, String xremark, Date date, Boolean commend,
-			Boolean open, Integer cid) {
+			Boolean open, Category category) {
 		this.name = name;
 		this.price = price;
 		this.pic = pic;
@@ -37,7 +37,7 @@ public class Product implements java.io.Serializable {
 		this.date = date;
 		this.commend = commend;
 		this.open = open;
-		this.cid = cid;
+		this.category = category;
 	}
 
 	public Integer getId() {
@@ -112,19 +112,19 @@ public class Product implements java.io.Serializable {
 		this.open = open;
 	}
 
-	public Integer getCid() {
-		return this.cid;
+	public Category getCategory() {
+		return category;
 	}
 
-	public void setCid(Integer cid) {
-		this.cid = cid;
+	public void setCategory(Category category) {
+		this.category = category;
 	}
 
 	@Override
 	public String toString() {
 		return "Product [id=" + id + ", name=" + name + ", price=" + price + ", pic=" + pic + ", remark=" + remark
-				+ ", xremark=" + xremark + ", date=" + date + ", commend=" + commend + ", open=" + open + ", cid=" + cid
-				+ "]";
+				+ ", xremark=" + xremark + ", date=" + date + ", commend=" + commend + ", open=" + open + ", category="
+				+ category + "]";
 	}
 
 }

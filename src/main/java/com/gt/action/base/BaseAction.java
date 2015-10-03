@@ -17,6 +17,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 import com.gt.services.base.AccountServiceI;
 import com.gt.services.base.CategoryServiceI;
+import com.gt.services.base.ProductServiceI;
 import com.opensymphony.xwork2.ActionSupport;
 import com.opensymphony.xwork2.ModelDriven;
 
@@ -94,6 +95,8 @@ public class BaseAction<T> extends ActionSupport implements RequestAware,Session
     protected AccountServiceI accountService;
 	@Autowired
     protected CategoryServiceI categoryService;
+	@Autowired
+	protected ProductServiceI productService;
 	public void WriteJson(Object obj){
  
       try {

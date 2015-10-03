@@ -54,7 +54,7 @@
 	    <div title="基本操作" data-options="iconCls:'icon-save'">   
 	       <ul>
 	          <li><a href="#" title="send_category_query.action">类别管理</a></li>
-	          <li><a href="#" title="send_protect_query.action">商品管理</a></li>
+	          <li><a href="#" title="send_product_query.action">商品管理</a></li>
 	       </ul>
 	    </div>   
 	    <div title="案列设置" data-options="iconCls:'icon-reload',selected:true">   
