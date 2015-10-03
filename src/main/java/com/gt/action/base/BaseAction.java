@@ -108,11 +108,9 @@ public class BaseAction<T> extends ActionSupport implements RequestAware,Session
 		ServletActionContext.getResponse().getWriter().flush();
 		ServletActionContext.getResponse().getWriter().close();
 	} catch (IOException e) {
-		// TODO Auto-generated catch block
 		e.printStackTrace();
 	}
     }
-
 	@Override
 	public T getModel() {
 		ParameterizedType type = (ParameterizedType)this.getClass().getGenericSuperclass();

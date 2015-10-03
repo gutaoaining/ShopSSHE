@@ -2,13 +2,18 @@ package com.gt.services.Impl;
 
 
 
+import java.util.ArrayList;
 import java.util.List;
 
+import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.gt.dao.base.CategoryDaoI;
 import com.gt.model.Category;
+import com.gt.model.Category;
+import com.gt.model.ComboCategory;
+import com.gt.model.ComboType;
 import com.gt.services.base.CategoryServiceI;
 
 
@@ -64,6 +69,18 @@ public class CategoryServiceImpl extends BaseServiceImpl<Category> implements Ca
 	@Override
 	public void deleteCategoryArray(List<Integer> ids) {
 		  categoryDao.deleteArray(ids);
+	}
+
+	@Override
+	public List<ComboType> queryType() {
+		List<Category> list = categoryDao.query();
+		List<ComboType> clist = new ArrayList<ComboType>();
+		for (Category Category : list) {
+			ComboType type = new ComboType();
+			BeanUtils.copyProperties(Category, type);
+			clist.add(type);
+		}
+		return clist;
 	}
 	
 

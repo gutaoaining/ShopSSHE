@@ -26,12 +26,8 @@ public class ProductServiceImpl extends BaseServiceImpl<Product> implements Prod
 	}
 
 	@Override
-	public List<Product> findProductAll(String name, int page, int size) {
-		List<Product> list = productDao.findProductAll(name,page,size);
-        for (Product product : list) {
-        	product.getCategory().setAccount(null);
-		}
-		return list;
+	public List<Product> findProductAll(String name, int page, int size) {		
+		return productDao.findProductAll(name,page,size);
 	}
 
 	@Override

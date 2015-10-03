@@ -10,6 +10,15 @@
             required: true,    
             missingMessage : '类型不能为空！' 
         }); 
+        $('#cc').combobox({    
+    	    url:'accountaction!queryAccount.action',  
+    	    panelHeight : 'auto',
+    	    panelWidth : 120,
+    	    width : 120,  
+    	    editable : false,
+    	    valueField:'id',    
+    	    textField:'login'   
+       }); 
         $('#add_category_form').form('disableValidation');
         $("#add_category_btn").on('click',function(){
         	 $('#add_category_form').form('enableValidation');

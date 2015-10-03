@@ -9,6 +9,19 @@
 			margin: 10px;
 		}
 	</style>
+	<script type="text/javascript">
+       $(function(){
+    	   $('#cc').combobox({    
+       	    url:'categoryaction!queryType.action',  
+       	    panelHeight : 'auto',
+       	    panelWidth : 120,
+       	    width : 120,  
+       	    editable : false,
+       	    valueField:'id',    
+       	    textField:'type'   
+        }); 
+        });
+   </script>
 </head>
 
 <body>

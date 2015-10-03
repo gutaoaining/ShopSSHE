@@ -63,6 +63,10 @@ public class CategoryAction extends BaseAction<Category> {
 		map();
 	}
 
+	public void queryType() {
+		 WriteJson(categoryService.queryType());
+	}
+	
 	public void map() {
 		map = new HashMap<String, Object>();
 		map.put("msg", true);

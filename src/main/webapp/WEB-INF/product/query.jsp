@@ -41,8 +41,8 @@
     				iconCls: 'icon-add',
     				handler: function(){
     					parent.$('#win').window({    
-    					    width : 340,    
-    					    height : 180,
+    					    width : 500,    
+    					    height : 600,
     					    title : '添加类别', 
     					    content : '<iframe  src="send_product_save.action" frameborder="0" width="100%" height="100%"/>'
     					});  
@@ -101,7 +101,7 @@
     		        {field:'category.type',title:'所属类别',width:100,
     		        	formatter: function(value,row,index){
         		         if(row.category!=null&&row.category.type!=null){
-    				      	
+    				      	 return row.category.type;
     					 }
         		      }
     		        }
