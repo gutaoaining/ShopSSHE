@@ -110,7 +110,7 @@
      	$('#searchType').searchbox({ 
      		searcher:function(value,name){ 
      			   $("#categoryGrid").datagrid('load',{
-                         type : value
+                         name : value
          		   });
      			}, 
      			prompt:'请输入查询商品信息' 

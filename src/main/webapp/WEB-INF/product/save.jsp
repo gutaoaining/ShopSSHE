@@ -11,6 +11,16 @@
 	</style>
 	<script type="text/javascript">
        $(function(){
+    	   $('input[name=name]').validatebox({    
+               required: true,    
+               missingMessage : '类型不能为空！' 
+           }); 
+    	   $('input[name=price]').numberbox({ 
+    		   min : 0,    
+    		   precision : 2 ,
+    		   prefix : '￥',   
+               required: true
+           }); 
     	   $('#cc').combobox({    
        	    url:'categoryaction!queryType.action',  
        	    panelHeight : 'auto',
@@ -41,14 +51,14 @@
 		</select>
 	</div>
 	<div>
-		<label>加入推荐:</label> 推荐:<input type="radio" name="commend"
-			checked="checked" value="true" />  不推荐:<input type="radio"
-			name="commend" value="false" /> 
+		<label>加入推荐:</label><input type="radio" name="commend"
+			checked="checked" value="true" />推荐  <input type="radio"
+			name="commend" value="false" />不推荐 
 	</div>
 	<div>
 		<label>是否有效:</label>
-		上架:<input type="radio" name="open" checked="checked"value="true" />
-		下架:<input type="radio" name="open" value="false" />
+		<input type="radio" name="open" checked="checked"value="true" />上架
+		<input type="radio" name="open" value="false" />下架
 				
 	</div>
 	<div>
@@ -57,11 +67,11 @@
 	</div>
 	<div>
 		<label>详细描述:</label>
-		<textarea name="xremark" cols="40" rows="8"></textarea>
+		<textarea name="xremark" cols="40" rows="6"></textarea>
 	</div>
 	<div>
-		<a id="submit" href="#" class="easyui-linkbutton">添 加</a> 
-		<a id="reset" href="#" class="easyui-linkbutton">重 置</a>
+		<a id="submit" href="#" class="easyui-linkbutton" data-options="iconCls:'icon-add'">添 加</a> 
+		<a id="reset" href="#" class="easyui-linkbutton" data-options="iconCls:'icon-reload'">重 置</a>
 	</div>
 </form>
 </body>
