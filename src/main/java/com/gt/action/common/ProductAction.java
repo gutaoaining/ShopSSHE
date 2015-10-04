@@ -26,6 +26,9 @@ public class ProductAction extends BaseAction<Product> {
 		Long total = productService.countAll(model.getName());
 		List<Product> list = new ArrayList<Product>();
 		list = productService.findProductAll(model.getName(), page, rows);
+		for (Product product : list) {
+			product.getCategory().setAccount(null);
+		}
 		map.put("total", total);
 		map.put("rows", list);
 		WriteJson(map);

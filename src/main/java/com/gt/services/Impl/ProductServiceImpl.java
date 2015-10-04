@@ -2,8 +2,10 @@ package com.gt.services.Impl;
 
 
 
+import java.util.ArrayList;
 import java.util.List;
 
+import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -26,8 +28,8 @@ public class ProductServiceImpl extends BaseServiceImpl<Product> implements Prod
 	}
 
 	@Override
-	public List<Product> findProductAll(String name, int page, int size) {		
-		return productDao.findProductAll(name,page,size);
+	public List<Product> findProductAll(String name, int page, int size) {	
+		return  productDao.findProductAll(name,page,size);
 	}
 
 	@Override

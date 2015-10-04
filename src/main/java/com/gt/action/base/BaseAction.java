@@ -111,6 +111,7 @@ public class BaseAction<T> extends ActionSupport implements RequestAware,Session
 		e.printStackTrace();
 	}
     }
+
 	@Override
 	public T getModel() {
 		ParameterizedType type = (ParameterizedType)this.getClass().getGenericSuperclass();
