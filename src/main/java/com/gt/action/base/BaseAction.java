@@ -6,6 +6,8 @@ import java.lang.reflect.ParameterizedType;
 import java.util.ArrayList;
 import java.util.Map;
 
+import javax.annotation.Resource;
+
 import org.apache.struts2.ServletActionContext;
 import org.apache.struts2.convention.annotation.Namespace;
 import org.apache.struts2.convention.annotation.ParentPackage;
@@ -15,9 +17,11 @@ import org.apache.struts2.interceptor.SessionAware;
 import org.codehaus.jackson.map.ObjectMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 
+import com.gt.model.FileImage;
 import com.gt.services.base.AccountServiceI;
 import com.gt.services.base.CategoryServiceI;
 import com.gt.services.base.ProductServiceI;
+import com.gt.util.UploadFile;
 import com.opensymphony.xwork2.ActionSupport;
 import com.opensymphony.xwork2.ModelDriven;
 
@@ -31,6 +35,7 @@ public class BaseAction<T> extends ActionSupport implements RequestAware,Session
     
     protected Integer page;
     protected Integer rows;
+    protected FileImage fileImage;
     /**
      * 通过前台提交的ids字符串，用字符串的形式接收处理
      * */
@@ -39,6 +44,14 @@ public class BaseAction<T> extends ActionSupport implements RequestAware,Session
     
     
     
+
+	public FileImage getFileImage() {
+		return fileImage;
+	}
+
+	public void setFileImage(FileImage fileImage) {
+		this.fileImage = fileImage;
+	}
 
 	public InputStream getInputStream() {
 		return inputStream;
@@ -97,6 +110,9 @@ public class BaseAction<T> extends ActionSupport implements RequestAware,Session
     protected CategoryServiceI categoryService;
 	@Autowired
 	protected ProductServiceI productService;
+    @Autowired
+    protected UploadFile uploadFile;
+    
 	public void WriteJson(Object obj){
  
       try {

@@ -14,9 +14,11 @@ public class BaseDaoImpl<T> implements BaseDaoI<T> {
     private SessionFactory sessionFactory;
     private Class clazz;
 	public BaseDaoImpl(){
+		/*
 		System.out.println("dao----this代表的是当前调用构造方法的对象："+this);
 		System.out.println("dao----获取当前this对象的父类："+this.getClass().getSuperclass());
 		System.out.println("dao----获取当前this对象父类的信息（包括泛型）:"+this.getClass().getGenericSuperclass());
+		*/
 		ParameterizedType type = (ParameterizedType)this.getClass().getGenericSuperclass();
 		clazz = (Class)type.getActualTypeArguments()[0];
 	}
