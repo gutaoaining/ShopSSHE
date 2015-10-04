@@ -76,6 +76,9 @@
                	});  
                }
            });
+           $("#reset").click(function(){
+              $("#add_product_form").form('reset');
+           });
         });
    </script>
 </head>

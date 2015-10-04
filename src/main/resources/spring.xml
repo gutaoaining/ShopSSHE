@@ -11,5 +11,11 @@ http://www.springframework.org/schema/context/spring-context-4.0.xsd
 
 	<!-- 自动扫描dao和service包(自动注入) -->
 	<context:component-scan base-package="com.gt.*" />
-
+    <bean id="property" class="org.springframework.beans.factory.config.PropertiesFactoryBean">
+      <property name="locations">
+        <array>
+          <value>classpath:public.properties</value>
+        </array>
+      </property>
+    </bean>
 </beans>
