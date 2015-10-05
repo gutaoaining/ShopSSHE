@@ -27,14 +27,17 @@
         		hot : row[0].hot,
         		'account.id' : row[0].account.id
         });       	         
-        
+        $('#update_category_form').form('disableValidation');
         $("#update_category_btn").on('click',function(){
+        	$('#update_category_btn').linkbutton('disable'); 
+        	$('#update_category_form').form('enableValidation');
             if($('#update_category_form').form('validate')){
             	$('#update_category_form').form('submit', {    
             	    url:'categoryaction!updateCategory.action',      
             	    success : function(data){  
                 	    var json = eval("("+data+")");   
-            	    	if(json.msg){           	
+            	    	if(json.msg){ 
+            	    	  $('#update_category_btn').linkbutton('enable');          	
             	    	  parent.$('#win').window('close');
             	    	  //通过穿换成dom对象从而拿到相应的节点元素，这是在浏览器不兼容是一种很有效的方法  
                       	  dg.datagrid('reload'); 
