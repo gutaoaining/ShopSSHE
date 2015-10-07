@@ -1,13 +1,18 @@
 package com.gt.listener;
 
-import javax.servlet.ServletContext;
+import javax.servlet.ServletContextEvent;
+import javax.servlet.ServletContextListener;
 
-import org.springframework.web.context.ServletContextAware;
-
-public class InitListener implements ServletContextAware {
+public class InitListener implements ServletContextListener {
 
 	@Override
-	public void setServletContext(ServletContext servletContext) {
+	public void contextInitialized(ServletContextEvent sce) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void contextDestroyed(ServletContextEvent sce) {
 		// TODO Auto-generated method stub
 
 	}
