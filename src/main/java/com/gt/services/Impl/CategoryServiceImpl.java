@@ -82,6 +82,12 @@ public class CategoryServiceImpl extends BaseServiceImpl<Category> implements Ca
 		}
 		return clist;
 	}
+
+	@Override
+	public List<Category> getTypeByHot(boolean hot) {
+		List<Category> list = categoryDao.getTypeByHot(hot);
+		return list;
+	}
 	
 
 }

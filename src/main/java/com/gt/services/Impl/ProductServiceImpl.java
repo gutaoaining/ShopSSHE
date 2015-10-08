@@ -2,10 +2,8 @@ package com.gt.services.Impl;
 
 
 
-import java.util.ArrayList;
 import java.util.List;
 
-import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -49,6 +47,10 @@ public class ProductServiceImpl extends BaseServiceImpl<Product> implements Prod
 	@Override
 	public void deleteProductArray(List<Integer> ids) {
 		  productDao.deleteArray(ids);
+	}
+	@Override
+	public List<Product> getProductByCid(int cid) {
+		return productDao.getProductByCid(cid);
 	}
 	
 

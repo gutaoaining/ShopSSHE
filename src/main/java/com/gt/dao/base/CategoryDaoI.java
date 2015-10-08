@@ -11,5 +11,7 @@ public interface CategoryDaoI extends BaseDaoI<Category> {
 
 	public Long countAll(String type);
 
+	public List<Category> getTypeByHot(boolean hot);
+
 	
 }

@@ -17,4 +17,6 @@ public interface CategoryServiceI extends BaseServiceI<Category> {
 	public void deleteCategoryArray(List<Integer> ids);
 
 	public List<ComboType> queryType();
+	
+	public List<Category> getTypeByHot(boolean hot);
 }

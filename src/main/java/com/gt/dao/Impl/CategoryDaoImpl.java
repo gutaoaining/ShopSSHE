@@ -35,5 +35,12 @@ public class CategoryDaoImpl extends BaseDaoImpl<Category>implements CategoryDao
 		return (Long)getSession().createQuery(hql).setString("type", "%" + type + "%").uniqueResult();
 		
 	}
+
+	@Override
+	public List<Category> getTypeByHot(boolean hot) {
+		String hql = "from Category c where c.hot=:hot";
+		
+		return getSession().createQuery(hql).setBoolean("hot", hot).list();
+	}
 	
 }

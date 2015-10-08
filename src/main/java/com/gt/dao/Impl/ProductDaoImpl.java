@@ -35,5 +35,15 @@ public class ProductDaoImpl extends BaseDaoImpl<Product>implements ProductDaoI {
 		return (Long)getSession().createQuery(hql).setString("name", "%" + name + "%").uniqueResult();
 		
 	}
+
+	@Override
+	public List<Product> getProductByCid(int cid) {
+		String hql = "from Product p where p.commend=true and p.open=true and p.category.id=:cid order by p.date desc";
+		return getSession().createQuery(hql)//
+				.setInteger("cid", cid)//
+				.setFirstResult(0)//
+				.setMaxResults(4)//
+				.list();
+	}
 	
 }

@@ -3,6 +3,8 @@ package sqlTest;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.codehaus.jackson.map.JsonSerializable;
+import org.codehaus.jackson.map.JsonSerializer;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -34,6 +36,14 @@ public class TestSqlProduct {
 			System.out.println(product);
 		}
     }
+	@Test
+    public void testProduct(){
+    	for (Product product : productService.getProductByCid(1)) {
+			System.out.println(product);
+		}
+//		System.out.println(productService.countAll(""));
+    }
+	
 	
 
 	

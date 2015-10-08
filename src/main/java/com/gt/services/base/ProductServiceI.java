@@ -14,4 +14,6 @@ public interface ProductServiceI extends BaseServiceI<Product> {
 	public void deleteProduct(String ids);
 	
 	public void deleteProductArray(List<Integer> ids);
+	
+	public List<Product> getProductByCid(int cid);
 }

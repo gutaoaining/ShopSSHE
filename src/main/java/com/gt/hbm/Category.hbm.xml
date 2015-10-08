@@ -14,7 +14,7 @@
         <property name="hot" type="java.lang.Boolean">
             <column name="hot" />
         </property>
-        <many-to-one name="account" class="Account">
+        <many-to-one name="account" class="Account" lazy="false">
             <column name="aid" />
         </many-to-one>
     </class>
