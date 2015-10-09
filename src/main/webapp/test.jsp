@@ -33,6 +33,12 @@
 							<tr><td>
 							 商品名称：${product.price}
 							</td></tr>
+							<tr>
+							 <td>
+							 ${pageContext.request.contextPath}
+							 </td>
+							</tr>
+							
 					 </table>
 				</td>
 				</c:forEach>

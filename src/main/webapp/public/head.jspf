@@ -2,6 +2,10 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <c:set value="${pageContext.request.contextPath}" var="shop"/>
 <title>gt商城</title>
+<!-- 前台的样式 -->
+<link rel="stylesheet" href="${shop}/css/public.css" />
+<link rel="stylesheet" href="${shop}/css/style.css" />
+<!-- 后台样式文件的导入，以及jquery -->
  <link rel="stylesheet" href="${shop}/easyui1.4.2/themes/icon.css" type="text/css">
  <link rel="stylesheet" href="${shop}/easyui1.4.2/themes/default/easyui.css" type="text/css">
  <script type="text/javascript" src="${shop}/easyui1.4.2/jquery.min.js"></script>
