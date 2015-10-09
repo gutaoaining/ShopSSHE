@@ -1,5 +1,8 @@
 package com.gt.listener;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import javax.servlet.ServletContextEvent;
 import javax.servlet.ServletContextListener;
 
@@ -8,11 +11,16 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.springframework.web.context.WebApplicationContext;
 import org.springframework.web.context.support.WebApplicationContextUtils;
 
+import com.gt.model.Category;
+import com.gt.model.Product;
+import com.gt.services.base.CategoryServiceI;
 import com.gt.services.base.ProductServiceI;
 
 public class InitListener implements ServletContextListener {
     
 	private ProductServiceI productService = null;
+	private CategoryServiceI categoryService = null;
+	ApplicationContext applicationContext = null;
 	@Override
 	public void contextInitialized(ServletContextEvent sce) {
 		//解决方案一:通过直接拿配置文件来获得service,但是并不好，因为加载了两次配置文件
@@ -25,9 +33,14 @@ public class InitListener implements ServletContextListener {
 //		productService = (ProductServiceI)applicationContext.getBean("productService");
 //		System.out.println("---------productService:"+productService);
 		//解决方案三:利用spring提供的一个工具类
-		ApplicationContext applicationContext =(ApplicationContext)WebApplicationContextUtils.getWebApplicationContext(sce.getServletContext());
+		applicationContext =(ApplicationContext)WebApplicationContextUtils.getWebApplicationContext(sce.getServletContext());
 	    productService = (ProductServiceI)applicationContext.getBean("productService");
-	    System.out.println("----------productService:"+productService);
+	    categoryService = (CategoryServiceI)applicationContext.getBean("categoryService");
+	    List<List<Product>> alllist = new ArrayList<List<Product>>();
+	    for (Category category : categoryService.getTypeByHot(true)) {
+			alllist.add(productService.getProductByCid(category.getId()));
+		}
+	    sce.getServletContext().setAttribute("alllist", alllist);
 	}
 
 	@Override

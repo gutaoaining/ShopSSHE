@@ -11,23 +11,40 @@
 </head>
 <body>
 
-  <c:forEach var="account" items="${applicationlist}">
-   ${account.id} ${account.login} ${account.name} ${account.pass}<br>
-  </c:forEach>
   <!-- 循环查询回来的所有类别商品-->
+   <c:forEach var="list" items="${applicationScope.alllist}">
 	<table>
 	   <!--类别标题-->
-	   <tr></tr>
+	   <tr><td colspan="4">${list[0].category.type}</td></tr>
 		<tr>
 		 <!--循环类别list中的商品-->
 		<td>
-			<table>
-				<tr><td></td></tr>
+			<table width="25%" border="0" cellspacing="0" cellpadding="0"> 
+				<tr>
+				 <c:forEach var="product" items="${list}">
+				<td>
+					<table width="25%" border="0" cellspacing="0" cellpadding="0"> 
+						 <tr>
+						 <td> <img src="${shop}/image/${product.pic}"/></td>
+						 </tr>
+						 <tr><td>
+							 商品名称：${product.name}
+							</td></tr>
+							<tr><td>
+							 商品名称：${product.price}
+							</td></tr>
+					 </table>
+				</td>
+				</c:forEach>
+				</tr>
+				
 			</table>
+		
 		</td>	
 		 <!--循环类别list中的商品-->
 		</tr>
 	</table>
+	 </c:forEach>
 <!-- 循环查询回来的所有类别商品-->
 </body>
 </html>
