@@ -2,6 +2,7 @@ package com.gt.listener;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Timer;
 
 import javax.servlet.ServletContextEvent;
 import javax.servlet.ServletContextListener;
@@ -15,11 +16,12 @@ import com.gt.model.Category;
 import com.gt.model.Product;
 import com.gt.services.base.CategoryServiceI;
 import com.gt.services.base.ProductServiceI;
+import com.gt.util.ProductTimerTask;
 
 public class InitListener implements ServletContextListener {
     
-	private ProductServiceI productService = null;
-	private CategoryServiceI categoryService = null;
+	private ProductTimerTask productTimerTask = null;
+
 	ApplicationContext applicationContext = null;
 	@Override
 	public void contextInitialized(ServletContextEvent sce) {
@@ -34,13 +36,10 @@ public class InitListener implements ServletContextListener {
 //		System.out.println("---------productService:"+productService);
 		//解决方案三:利用spring提供的一个工具类
 		applicationContext =(ApplicationContext)WebApplicationContextUtils.getWebApplicationContext(sce.getServletContext());
-	    productService = (ProductServiceI)applicationContext.getBean("productService");
-	    categoryService = (CategoryServiceI)applicationContext.getBean("categoryService");
-	    List<List<Product>> alllist = new ArrayList<List<Product>>();
-	    for (Category category : categoryService.getTypeByHot(true)) {
-			alllist.add(productService.getProductByCid(category.getId()));
-		}
-	    sce.getServletContext().setAttribute("alllist", alllist);
+		productTimerTask = (ProductTimerTask)applicationContext.getBean("productTimerTask");
+	    productTimerTask.setServletContext(sce.getServletContext());
+		new Timer(true).schedule(productTimerTask, 0, 1000*60*60);
+	    
 	}
 
 	@Override

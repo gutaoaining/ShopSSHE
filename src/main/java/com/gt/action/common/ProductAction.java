@@ -1,22 +1,19 @@
 package com.gt.action.common;
 
-import java.io.File;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
-import java.util.UUID;
 
-import org.apache.commons.io.FilenameUtils;
 import org.apache.struts2.convention.annotation.Action;
 import org.apache.struts2.convention.annotation.Namespace;
 import org.apache.struts2.convention.annotation.ParentPackage;
-import org.aspectj.util.FileUtil;
+import org.apache.struts2.convention.annotation.Result;
 
 import com.gt.action.base.BaseAction;
 import com.gt.model.Product;
 @ParentPackage("basePackage")
 @Namespace("/usershop")
-@Action("productAction")
+@Action(value = "productAction", results={@Result(name="detail",location="/detail.jsp")})
 public class ProductAction extends BaseAction<Product> {
 	/**
 	 * 
@@ -49,6 +46,11 @@ public class ProductAction extends BaseAction<Product> {
 		productService.save(model);
 		System.out.println(model);
 		map();
+	}
+	public String detailProduct() {
+		System.out.println("shoudao:"+model.getId());
+		request.put("productdetail", productService.get(model.getId()));
+		return "detail";
 	}
 	public void map() {
 		map = new HashMap<String, Object>();

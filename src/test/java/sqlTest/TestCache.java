@@ -16,9 +16,11 @@ public class TestCache {
    private ProductServiceI productService;
    @Test
    public void test1(){
-	  
-	   System.out.println(productService.get(1));
-	   System.out.println(productService.get(1));
+//	   System.out.println(productService.get(1));
+//	   System.out.println(productService.get(1));
+	   Product product =productService.get(1);
+	   product.setName("gutao");
+	   productService.update(product);
    }
    @Test
    public void test2(){

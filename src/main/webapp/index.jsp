@@ -154,7 +154,7 @@
                 <ul id="first-carousel" class="first-and-second-carousel jcarousel-skin-tango">
 					    <!--循环类别list中的商品-->
 					    <c:forEach var="product" items="${list}">
-					    <li> <a  href="#" class="product_image"><img src="${shop}/image/${product.pic}" /></a>
+					    <li> <a  href="${shop}/usershop/productAction!detailProduct.action?id=${product.id}" class="product_image"><img src="${shop}/image/${product.pic}" /></a>
                         	<div class="product_info">
                             <h3>
                             <a href="#">${product.name}</a>
