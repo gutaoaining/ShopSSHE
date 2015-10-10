@@ -25,7 +25,7 @@ public class TestSqlContect {
 	@Test
 	public void test() {
 
-		System.out.println(accountService.get());
+		System.out.println(accountService.get(1));
 	}
 	@Test
 	public void testsave() {

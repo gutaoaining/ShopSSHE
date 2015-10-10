@@ -45,5 +45,6 @@ public class ProductDaoImpl extends BaseDaoImpl<Product>implements ProductDaoI {
 				.setMaxResults(4)//
 				.list();
 	}
+
 	
 }

@@ -61,9 +61,12 @@ http://www.springframework.org/schema/aop/spring-aop-4.0.xsd
 				<prop key="hibernate.dialect">${hibernate.dialect}</prop>
 				<prop key="hibernate.show_sql">${hibernate.show_sql}</prop>
 				<prop key="hibernate.format_sql">${hibernate.format_sql}</prop>
+				<!-- 开启二级缓存 -->
+			    <prop key="hibernate.cache.use_second_level_cache">true</prop>
+			    <!-- 配置二级缓存的相应的类 -->
+			   <prop key="hibernate.cache.region.factory_class"> org.hibernate.cache.ehcache.SingletonEhCacheRegionFactory</prop>
 			</props>
 		</property>
-
 		<!-- 自动扫描注解方式配置的hibernate类文件 -->
 	   <!-- 	 <property name="packagesToScan">
 			<list>
@@ -117,5 +120,12 @@ http://www.springframework.org/schema/aop/spring-aop-4.0.xsd
 		<aop:advisor pointcut-ref="transactionPointcut" advice-ref="transactionAdvice" />
 	</aop:config>
 
-
+        <!-- cacheManager, 指定ehcache.xml的位置 --> 
+	<bean id="cacheManagerEhcache" class="org.springframework.cache.ehcache.EhCacheManagerFactoryBean">
+		<property name="configLocation">
+        	<value>classpath:ehcache.xml</value>
+        </property>
+        <!-- 由于hibernate也使用了Ehcache, 保证双方都使用同一个缓存管理器 -->
+        <property name="shared" value="true"/>
+    </bean>
 </beans>

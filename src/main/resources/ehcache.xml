@@ -1,0 +1,56 @@
+<ehcache xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../config/ehcache.xsd">
+	<!--
+    Subdirectories can be specified below the property e.g. java.io.tmpdir/one
+    -->
+    <!-- path定义缓存的对象默认存放到哪里 -->
+    <diskStore path="D:/cache"/>
+   
+    <!--defaultCache节点为缺省的缓存策略 -->
+    <!--maxElementsInMemory为内存中最大允许存在的对象数量 -->
+    <!--eternal设置缓存中的对象是否永远不过期-->
+    <!--overflowToDisk 把溢出的对象存放到硬盘上 -->
+    <!--timeToIdleSeconds 指定缓存对象空闲多长时间就过期,过期的对象会被清除掉 -->
+    <!--timeToLiveSeconds指定缓存对象总的存活时间 -->
+    <!--diskPersistent 当jvm结束时是否持久化对象 -->
+    <!--diskExpiryThreadIntervalSeconds 指定专门用于清除过期对象的监听线程的轮询时间 -->
+    <!--cache中是定义一些特别的缓存，如果不进行cache的定义，那么就会采用默认的缓存技术，下面我是为这个类定义缓存 -->
+    <defaultCache
+	     maxElementsInMemory="10000"
+	     eternal="false"
+	     timeToIdleSeconds="120"
+	     timeToLiveSeconds="120"
+	     overflowToDisk="true"
+	     maxElementsOnDisk="10000000"
+	     diskPersistent="false"
+	     diskExpiryThreadIntervalSeconds="120"
+	     memoryStoreEvictionPolicy="LRU"
+     />
+    
+    <cache name="org.hibernate.cache.spi.UpdateTimestampsCache"
+		   maxElementsInMemory="5000" 
+	       eternal="true" 
+	       overflowToDisk="true" />
+	<cache name="org.hibernate.cache.internal.StandardQueryCache"
+	       maxElementsInMemory="10000" 
+	       eternal="false" 
+	       timeToLiveSeconds="120"
+	       overflowToDisk="true" />	
+	
+	<!--
+	java文件注解查找cache方法名的策略：如果不指定java文件注解中的region="ehcache.xml中的name的属性值", 
+	则使用name名为类的全路径名称, 如果不存在与类名匹配的cache名称, 则用 defaultCache
+	如果User包含set集合, 则需要另行指定其cache
+	例如User包含citySet集合, 则也需要
+	添加配置到ehcache.xml中
+	-->    
+    <cache name="com.gt.model.Product" maxElementsInMemory="2000" eternal="false" 
+	       timeToIdleSeconds="120" timeToLiveSeconds="120"
+	       overflowToDisk="true" />  
+	<cache name="com.gt.model.Category" maxElementsInMemory="2000" eternal="false" 
+	       timeToIdleSeconds="120" timeToLiveSeconds="120"
+	       overflowToDisk="true" />  
+	<cache name="com.gt.model.Account" maxElementsInMemory="2000" eternal="false" 
+	       timeToIdleSeconds="120" timeToLiveSeconds="120"
+	       overflowToDisk="true" />  
+	    
+</ehcache>

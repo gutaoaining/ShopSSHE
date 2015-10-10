@@ -4,6 +4,7 @@
 <!-- Generated 2015-9-26 12:20:24 by Hibernate Tools 4.0.0 -->
 <hibernate-mapping package="com.gt.model">
     <class name="Category" table="category" catalog="shopping">
+        <cache usage="read-write"  region="com.gt.model.Category"/>
         <id name="id" type="java.lang.Integer">
             <column name="id" />
             <generator class="identity" />

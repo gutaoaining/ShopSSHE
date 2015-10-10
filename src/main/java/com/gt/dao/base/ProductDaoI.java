@@ -13,4 +13,5 @@ public interface ProductDaoI extends BaseDaoI<Product> {
 	public Long countAll(String name);
 
 	public List<Product> getProductByCid(int cid);
+	
 }

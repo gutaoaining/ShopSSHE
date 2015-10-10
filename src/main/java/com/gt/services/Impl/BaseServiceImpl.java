@@ -27,9 +27,9 @@ public class BaseServiceImpl<T> implements BaseServiceI<T> {
 		@Autowired
 		protected BaseDaoImpl<T> baseDao;
 		@Override
-		public T get() {
+		public T get(int id) {
 			// TODO Auto-generated method stub
-			T t = baseDao.get(clazz, 1);
+			T t = baseDao.get(clazz, id);
 			return t;
 		}
 		@Override
