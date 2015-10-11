@@ -9,9 +9,6 @@ public class Status implements java.io.Serializable {
 	private Integer id;
 	private String status;
 
-	public Status() {
-	}
-
 	public Status(String status) {
 		this.status = status;
 	}

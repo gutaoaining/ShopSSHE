@@ -29,11 +29,25 @@
         <property name="address" type="string">
             <column name="address" length="32" />
         </property>
-        <property name="sid" type="java.lang.Integer">
+       <many-to-one name="status" class="Status">
             <column name="sid" />
-        </property>
-        <property name="uid" type="java.lang.Integer">
-            <column name="uid" />
-        </property>
+       </many-to-one>
+       <many-to-one name="user" class="User">
+                 <column name="uid" />
+       </many-to-one>
+       <!--
+                如果是多对一的查找，就是通过表中的外键查找对应的主表中的主键
+                如果是一对多，则是查询自己的主键找到对应表中的外键
+        -->
+       <set name="sorderSet">
+         <!-- 代表的是外键 -->
+        <key>
+          <column name="bid"/>
+        </key>
+        <one-to-many class="Sorder"/>
+       </set>
+       
+       
+        
     </class>
 </hibernate-mapping>
