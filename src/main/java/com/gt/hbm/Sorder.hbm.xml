@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-10-11 20:53:45 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping package="com.gt.model">
+    <class name="Sorder" table="sorder" catalog="shopping">
+        <id name="id" type="java.lang.Integer">
+            <column name="id" />
+            <generator class="identity" />
+        </id>
+        <property name="name" type="string">
+            <column name="name" length="20" />
+        </property>
+        <property name="price" type="big_decimal">
+            <column name="price" precision="8" />
+        </property>
+        <property name="number" type="java.lang.Integer">
+            <column name="number" />
+        </property>
+        <property name="pid" type="java.lang.Integer">
+            <column name="pid" />
+        </property>
+        <property name="bid" type="java.lang.Integer">
+            <column name="bid" />
+        </property>
+    </class>
+</hibernate-mapping>

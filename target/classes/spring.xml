@@ -9,12 +9,13 @@ http://www.springframework.org/schema/context/spring-context-4.0.xsd
 	<!-- 引入属性文件 ,属性占位符配置器-->
 	<context:property-placeholder location="classpath:config.properties" />
 
-	<!-- 自动扫描dao和service包(自动注入) -->
+	<!-- 自动扫描com.gt.*下的所有包(自动注入)常量 -->
 	<context:component-scan base-package="com.gt.*" />
     <bean id="property" class="org.springframework.beans.factory.config.PropertiesFactoryBean">
       <property name="locations">
         <array>
           <value>classpath:public.properties</value>
+          <!-- 公共常量的配置文件 -->
         </array>
       </property>
     </bean>
