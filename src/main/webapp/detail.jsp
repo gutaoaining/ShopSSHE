@@ -221,22 +221,22 @@
                                         <img src="${shop}/images/1.png" />
                                     </li>
                                     <li>
-                                        <img src="images/2.png" />
+                                        <img src="${shop}/images/2.png" />
                                     </li>
                                     <li>
-                                        <img src="images/3.png" />
+                                        <img src="${shop}/images/3.png" />
                                     </li>
                                     <li>
-                                        <img src="images/4.png" />
+                                        <img src="${shop}/images/4.png" />
                                     </li>
                                     <li>
-                                        <img src="images/5.png" />
+                                        <img src="${shop}/images/5.png" />
                                     </li>
                                     <li>
-                                        <img src="images/6.png" />
+                                        <img src="${shop}/images/6.png" />
                                     </li>
                                     <li>
-                                        <img src="images/7.png" />
+                                        <img src="${shop}/images/7.png" />
                                     </li>
                                     <li>
                                         <img src="${shop}/images/8.png" />
@@ -251,7 +251,7 @@
                 <!--详情右侧-->
                 <div class="product_rightcol fr">
                     <div id="name">
-                        <h1>${product.name}</h1> <strong>支持货到付款，新店开张，全场低至三折包邮，已购买运费险，七天无理由退换，让您购物无忧！</strong>
+                        <h1>${productdetail.name}</h1> <strong>支持货到付款，新店开张，全场低至三折包邮，已购买运费险，七天无理由退换，让您购物无忧！</strong>
                     </div>
                     <ul id="summary">
                         <li id="summary-market">
@@ -261,7 +261,7 @@
                         </li>
                         <li id="summary-price">
                             <div class="dt">折&nbsp;后&nbsp;价：</div>
-                            <div class="dd"> <strong class="p-price" id="jd-price">￥89.00</strong>
+                            <div class="dd"> <strong class="p-price" id="jd-price">￥${productdetail.price}</strong>
                             </div>
                         </li>
                     </ul>
@@ -314,9 +314,10 @@
 								 <input value="1" size="2" >
                             </div>
                         </li>
-                    </ul>
+                    </ul><!-- 加入购物车进入购物车页面 -->
                     <div class="add_to_buttons">
-                        <button class="add_cart"><a href="#">加入购物车</a></button>
+                        <a href="${shop}/usershop/sorderAction!addProduct.action?product.id=${productdetail.id}">加入购物车</a>
+                     
                     </div>
                 </div>
                 <!--详情右侧结束--> </div>
@@ -327,7 +328,7 @@
                 <ul id="first-carousel" class="first-and-second-carousel jcarousel-skin-tango">
                     <li>
                         <a  href="#"class="product_image">
-                            <img src="images/pr_l_1.jpg" />
+                            <img src="${shop}/images/pr_l_1.jpg" />
                         </a>
                         <div class="product_info">
                             <h3>
@@ -345,7 +346,7 @@
                     </li>
                     <li>
                         <a   href="#" class="product_image">
-                            <img src="images/pr_l_2.jpg" />
+                            <img src="${shop}/images/pr_l_2.jpg" />
                         </a>
                         <div class="product_info">
                             <h3>
@@ -364,7 +365,7 @@
                     </li>
                     <li>
                         <a  href="#" class="product_image">
-                            <img src="images/pr_l_3.jpg" />
+                            <img src="${shop}/images/pr_l_3.jpg" />
                         </a>
                         <div class="product_info">
                             <h3>
@@ -383,7 +384,7 @@
                     </li>
                     <li>
                         <a  href="#" class="product_image">
-                            <img src="images/pr_l_5.jpg" />
+                            <img src="${shop}/images/pr_l_5.jpg" />
                         </a>
                         <div class="product_info">
                             <h3>
@@ -402,7 +403,7 @@
                     </li>
                     <li>
                         <a  href="#" class="product_image">
-                            <img src="images/pr_l_1.jpg" />
+                            <img src="${shop}/images/pr_l_1.jpg" />
                         </a>
                         <div class="product_info">
                             <h3>
@@ -421,7 +422,7 @@
                     </li>
                     <li>
                         <a  href="#" class="product_image">
-                            <img src="images/pr_l_2.jpg" />
+                            <img src="${shop}/images/pr_l_2.jpg" />
                         </a>
                         <div class="product_info">
                             <h3>
@@ -447,7 +448,7 @@
                 <ul id="first-carousel" class="first-and-second-carousel jcarousel-skin-tango">
                     <li>
                         <a  href="#" class="product_image">
-                            <img src="images/pr_l_1.jpg" />
+                            <img src="${shop}/images/pr_l_1.jpg" />
                         </a>
                         <div class="product_info">
                             <h3>
@@ -465,7 +466,7 @@
                     </li>
                     <li>
                         <a  href="#" class="product_image">
-                            <img src="images/pr_l_2.jpg" />
+                            <img src="${shop}/images/pr_l_2.jpg" />
                         </a>
                         <div class="product_info">
                             <h3>
@@ -484,7 +485,7 @@
                     </li>
                     <li>
                         <a  href="#" class="product_image">
-                            <img src="images/pr_l_3.jpg" />
+                            <img src="${shop}/images/pr_l_3.jpg" />
                         </a>
                         <div class="product_info">
                             <h3>
@@ -503,7 +504,7 @@
                     </li>
                     <li>
                         <a  href="#" class="product_image">
-                            <img src="images/pr_l_5.jpg" />
+                            <img src="${shop}/images/pr_l_5.jpg" />
                         </a>
                         <div class="product_info">
                             <h3>
@@ -541,7 +542,7 @@
                     </li>
                     <li>
                         <a  href="#" class="product_image">
-                            <img src="images/pr_l_2.jpg" />
+                            <img src="${shop}/images/pr_l_2.jpg" />
                         </a>
                         <div class="product_info">
                             <h3>

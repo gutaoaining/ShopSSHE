@@ -1,21 +1,14 @@
 package com.gt.listener;
 
-import java.util.ArrayList;
-import java.util.List;
+
 import java.util.Timer;
 
 import javax.servlet.ServletContextEvent;
 import javax.servlet.ServletContextListener;
 
 import org.springframework.context.ApplicationContext;
-import org.springframework.context.support.ClassPathXmlApplicationContext;
-import org.springframework.web.context.WebApplicationContext;
 import org.springframework.web.context.support.WebApplicationContextUtils;
 
-import com.gt.model.Category;
-import com.gt.model.Product;
-import com.gt.services.base.CategoryServiceI;
-import com.gt.services.base.ProductServiceI;
 import com.gt.util.ProductTimerTask;
 
 public class InitListener implements ServletContextListener {

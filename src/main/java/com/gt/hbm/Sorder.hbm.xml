@@ -17,9 +17,11 @@
         <property name="number" type="java.lang.Integer">
             <column name="number" />
         </property>
-        <property name="pid" type="java.lang.Integer">
-            <column name="pid" />
-        </property>
+        <many-to-one name="product" class="Product">
+            <column name="pid" />  
+        </many-to-one>
+           
+  
         <property name="bid" type="java.lang.Integer">
             <column name="bid" />
         </property>

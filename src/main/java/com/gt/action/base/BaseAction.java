@@ -21,6 +21,7 @@ import com.gt.model.FileImage;
 import com.gt.services.base.AccountServiceI;
 import com.gt.services.base.CategoryServiceI;
 import com.gt.services.base.ProductServiceI;
+import com.gt.services.base.SorderServiceI;
 import com.gt.util.UploadFile;
 import com.opensymphony.xwork2.ActionSupport;
 import com.opensymphony.xwork2.ModelDriven;
@@ -112,6 +113,8 @@ public class BaseAction<T> extends ActionSupport implements RequestAware,Session
 	protected ProductServiceI productService;
     @Autowired
     protected UploadFile uploadFile;
+    @Autowired
+    protected SorderServiceI sorderService;
     
 	public void WriteJson(Object obj){
  

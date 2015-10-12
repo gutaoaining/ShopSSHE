@@ -16,18 +16,17 @@ public class Sorder implements java.io.Serializable {
 	private String name;
 	private BigDecimal price;
 	private Integer number;
-	private Integer pid;
+	private Product product;
 	private Integer bid;
 
-	public Sorder() {
+	
+
+	public Product getProduct() {
+		return product;
 	}
 
-	public Sorder(String name, BigDecimal price, Integer number, Integer pid, Integer bid) {
-		this.name = name;
-		this.price = price;
-		this.number = number;
-		this.pid = pid;
-		this.bid = bid;
+	public void setProduct(Product product) {
+		this.product = product;
 	}
 
 	public Integer getId() {
@@ -62,13 +61,6 @@ public class Sorder implements java.io.Serializable {
 		this.number = number;
 	}
 
-	public Integer getPid() {
-		return this.pid;
-	}
-
-	public void setPid(Integer pid) {
-		this.pid = pid;
-	}
 
 	public Integer getBid() {
 		return this.bid;
