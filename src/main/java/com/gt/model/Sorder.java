@@ -8,6 +8,10 @@ import java.math.BigDecimal;
  */
 public class Sorder implements java.io.Serializable {
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -7003708334893781345L;
 	private Integer id;
 	private String name;
 	private BigDecimal price;

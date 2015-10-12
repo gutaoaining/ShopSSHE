@@ -6,6 +6,10 @@ package com.gt.model;
  */
 public class Status implements java.io.Serializable {
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 6610954943486261560L;
 	private Integer id;
 	private String status;
 

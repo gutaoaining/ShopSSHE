@@ -9,6 +9,10 @@ import java.util.Date;
  */
 public class Product implements java.io.Serializable {
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 8721900170509916456L;
 	private Integer id;
 	private String name;
 	private BigDecimal price;

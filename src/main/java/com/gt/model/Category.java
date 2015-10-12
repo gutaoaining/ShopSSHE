@@ -6,6 +6,10 @@ package com.gt.model;
  */
 public class Category implements java.io.Serializable {
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -8008779545309476524L;
 	private Integer id;
 	private String type;
 	private Boolean hot;

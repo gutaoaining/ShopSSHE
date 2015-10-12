@@ -1,6 +1,12 @@
 package com.gt.model;
 
-public class ComboType {
+import java.io.Serializable;
+
+public class ComboType implements Serializable{
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -565215137072740338L;
 	private Integer id;
 	private String type;
 	public Integer getId() {

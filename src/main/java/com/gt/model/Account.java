@@ -6,6 +6,10 @@ package com.gt.model;
  */
 public class Account implements java.io.Serializable {
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 7281556707046508080L;
 	private Integer id;
 	private String login;
 	private String name;

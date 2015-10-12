@@ -11,6 +11,10 @@ import java.util.Set;
  */
 public class Busorder implements java.io.Serializable {
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 673465494281976285L;
 	private Integer id;
 	private String name;
 	private String phone;

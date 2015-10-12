@@ -1,6 +1,12 @@
 package com.gt.model;
 
-public class ComboCategory {
+import java.io.Serializable;
+
+public class ComboCategory implements Serializable{
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -5377951392332709013L;
 	private Integer id;
 	private String login;
 	public Integer getId() {
