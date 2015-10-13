@@ -1,7 +1,6 @@
 package com.gt.model;
 // Generated 2015-10-11 20:55:41 by Hibernate Tools 4.0.0
 
-import java.math.BigDecimal;
 import java.util.Date;
 import java.util.Set;
 
@@ -20,7 +19,7 @@ public class Busorder implements java.io.Serializable {
 	private String phone;
 	private String remark;
 	private Date date;
-	private BigDecimal total;
+	private Double total;
 	private String post;
 	private String address;
 	private Status status;
@@ -96,11 +95,11 @@ public class Busorder implements java.io.Serializable {
 		this.date = date;
 	}
 
-	public BigDecimal getTotal() {
+	public Double getTotal() {
 		return this.total;
 	}
 
-	public void setTotal(BigDecimal total) {
+	public void setTotal(Double total) {
 		this.total = total;
 	}
 

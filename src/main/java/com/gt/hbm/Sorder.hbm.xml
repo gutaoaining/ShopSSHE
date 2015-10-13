@@ -11,7 +11,7 @@
         <property name="name" type="string">
             <column name="name" length="20" />
         </property>
-        <property name="price" type="big_decimal">
+        <property name="price" type="java.lang.Double">
             <column name="price" precision="8" />
         </property>
         <property name="number" type="java.lang.Integer">

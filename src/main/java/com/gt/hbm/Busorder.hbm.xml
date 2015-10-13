@@ -20,7 +20,7 @@
         <property name="date" type="timestamp">
             <column name="date" length="19" not-null="true" />
         </property>
-        <property name="total" type="big_decimal">
+        <property name="total" type="java.lang.Double">
             <column name="total" precision="8" />
         </property>
         <property name="post" type="string">
