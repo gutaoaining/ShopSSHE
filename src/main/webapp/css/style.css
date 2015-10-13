@@ -90,7 +90,7 @@ ul.breadcrumb li.active a { color:#f38256; }
 .btn-reduce{ width:15px; height:15px; left:90px; background: url("../images/newicon.png") no-repeat 0  0; }
 .btn-add{ width:15px; height:15px; left:160px; background: url("../images/newicon.png") no-repeat -16px 0px; }
 .add_to_buttons { width: 100%; padding: 25px 0px; }
-.product_rightcol .add_to_buttons button.add_cart { padding: 17px 85px 17px 25px; font-size: 18px; font-weight: bold!important; color:#494949; text-transform: uppercase; border: 0px; cursor: pointer; background: #f38256 url(../images/addtocart.png) no-repeat 137px center; }
+.product_rightcol .add_to_buttons .a_add_cart { padding: 17px 85px 17px 25px; font-size: 18px; font-weight: bold!important; color:#494949; text-transform: uppercase; border: 0px; cursor: pointer; background: #f38256 url(../images/addtocart.png) no-repeat 137px center; }
 
 
 /*购物车*/

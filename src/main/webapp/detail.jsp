@@ -272,13 +272,13 @@
                                 <div class="item">
                                     <b></b>
                                     <a href="#none" title="白色">
-                                        <img data-img="1" src="${shop}/images/11.jpg" width="25" height="25" alt="白色 "> <i>白色</i>
+                                        <img  src="${shop}/images/11.jpg" width="25" height="25" alt="白色 "> <i>白色</i>
                                     </a>
                                 </div>
                                 <div class="item  selected">
                                     <b></b>
                                     <a href="#none" title="黑色">
-                                        <img data-img="1" src="${shop}/images/22.jpg" width="25" height="25" alt="黑色 "> <i>黑色</i>
+                                        <img  src="${shop}/images/22.jpg" width="25" height="25" alt="黑色 "> <i>黑色</i>
                                     </a>
                                 </div>
                             </div>
@@ -316,7 +316,15 @@
                         </li>
                     </ul><!-- 加入购物车进入购物车页面 -->
                     <div class="add_to_buttons">
-                        <a href="${shop}/usershop/sorderAction!addProduct.action?product.id=${productdetail.id}">加入购物车</a>
+                    <!--  
+                    <a role="button" href="${shop}/usershop/sorderAction!addProduct.action?product.id=${productdetail.id}" class="btn btn-danger btn-lg">
+                     &nbsp;&nbsp;加入购物车&nbsp;&nbsp;&nbsp;
+                     <span class="glyphicon glyphicon-modal-window"></span>
+                     </a>-->
+                     
+                      <a class="a_add_cart" href="${shop}/usershop/sorderAction!addProduct.action?product.id=${productdetail.id}">
+                                                   加入购物车
+                      </a>
                      
                     </div>
                 </div>
@@ -336,12 +344,13 @@
                             </h3>
                             <small>印花 纯棉</small>
                         </div>
-                        <div class="price_info"></button>
+                        <div class="price_info">
                         <button>
                             <span class="pr_add">添加购物车</span>
                         </button>
                         <button class="price_add" title="" type="button">
                             <span class="pr_price">￥76.00</span>
+                         </button>
                         </div>
                     </li>
                     <li>
@@ -456,12 +465,13 @@
                             </h3>
                             <small>印花 纯棉</small>
                         </div>
-                        <div class="price_info"></button>
+                        <div class="price_info">
                         <button>
                             <span class="pr_add">添加购物车</span>
                         </button>
                         <button class="price_add" title="" type="button">
                             <span class="pr_price">￥76.00</span>
+                        </button>
                         </div>
                     </li>
                     <li>
