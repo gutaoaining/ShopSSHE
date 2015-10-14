@@ -34,6 +34,7 @@ public class Busorder implements java.io.Serializable {
 		this.sorderSet = sorderSet;
 	}
 
+
 	public Set<Sorder> getSorderSet() {
 		return sorderSet;
 	}

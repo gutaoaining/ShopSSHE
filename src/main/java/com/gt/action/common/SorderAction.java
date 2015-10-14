@@ -14,7 +14,7 @@ import com.gt.model.Product;
 import com.gt.model.Sorder;
 @ParentPackage("basePackage")
 @Namespace("/usershop")                                                                              
-@Action(value="sorderAction",results={@Result(name="shopcar",type="redirect",location="/shopcar.jsp")})
+@Action(value="sorderAction",results={@Result(name="shopcar",type="redirect",location="/showCar.jsp")})
 public class SorderAction extends BaseAction<Sorder> {
      public String addProduct(){
     	 //到数据库中找到相应的商品数据
@@ -33,11 +33,13 @@ public class SorderAction extends BaseAction<Sorder> {
     	 model.setProduct(product);
     	 Busorder busorder = (Busorder)session.get("busOrder");
     	 busorder.getSorderSet().add(model);
+    	 //计算总价格
     	 double total = 0.0;
     	 for (Sorder sorder : busorder.getSorderSet()) {
 			 total += sorder.getPrice()*sorder.getNumber();
 		 }
     	 busorder.setTotal(total);
+    	 
     	 session.put("busOrder", busorder);
     
     	 return "shopcar";
