@@ -19,7 +19,20 @@
 <td>小计</td>
 <td>操作</td>
 </tr>
-<tr><td colspan="6">总价格</td></tr>
+<c:forEach items="${sessionScope.busOrder.getSorderSet()}" var="sorder">
+<tr>
+<td>${sorder.id}</td>
+<td>${sorder.name}</td>
+<td>${sorder.price}</td>
+<td><input type="text" value="${sorder.number}"></td>
+<td>${sorder.price*sorder.number}</td>
+<td>删除,结算</td>
+</tr>
+
+</c:forEach>
+<tr>
+<td colspan="6">总价格：${sessionScope.busOrder.total}</td>
+</tr>
 </table>
 
 

@@ -1,6 +1,8 @@
 package com.gt.action.common;
 
 
+import java.util.HashSet;
+
 import org.apache.struts2.convention.annotation.Action;
 import org.apache.struts2.convention.annotation.Namespace;
 import org.apache.struts2.convention.annotation.ParentPackage;
@@ -18,9 +20,12 @@ public class SorderAction extends BaseAction<Sorder> {
     	 //到数据库中找到相应的商品数据
     	 Product product = productService.get(model.getProduct().getId());
     	 //判断session中有没有购物车
+    	 System.out.println("-----------");
     	 if(session.get("busOrder")==null){
-    		 session.put("busOrder", new Busorder());
+    		 session.put("busOrder", new Busorder(new HashSet<Sorder>()));
     	 }
+    	 System.out.println("----shopcar-----");
+    	 System.out.println(model.getProduct().getId());
     	 //把商品信息转化为sorder
     	 model.setName(product.getName());
     	 model.setNumber(1);
@@ -32,8 +37,9 @@ public class SorderAction extends BaseAction<Sorder> {
     	 for (Sorder sorder : busorder.getSorderSet()) {
 			 total += sorder.getPrice()*sorder.getNumber();
 		 }
-    	 System.out.println("----shopcar-----");
-    	 System.out.println(model.getProduct().getId());
+    	 busorder.setTotal(total);
+    	 session.put("busOrder", busorder);
+    
     	 return "shopcar";
      }
 }

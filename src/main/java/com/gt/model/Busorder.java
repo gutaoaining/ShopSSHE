@@ -29,6 +29,11 @@ public class Busorder implements java.io.Serializable {
 	
 
 
+	public Busorder(Set<Sorder> sorderSet) {
+		super();
+		this.sorderSet = sorderSet;
+	}
+
 	public Set<Sorder> getSorderSet() {
 		return sorderSet;
 	}
