@@ -8,6 +8,8 @@
 		#dd div{
 			padding: 5px;
 		}
+        .header_search {cursor: pointer; float: right; height: 23px;
+    margin: 30px 0; padding: 3px; width: 230px;}
 	</style>
 <body>
 	<div class="wrapper">
@@ -29,84 +31,22 @@
 					<h1 class="logo clear fl">
 						<a href="index.html"> <img src="images/logo.png" /> </a>
 					</h1>
-					<!-- 小购物车 -->
-					<div class="minicart">
-						<a class="minicart_link" href="#"> <span class="item"></span></a>
-					</div>
+					
 					<!-- 小购物车结束 -->
 					<!-- 搜索框 -->
 					<div class="header_search">
-						<div class="form-search ">
-							<input value="请输入商品名称" class="input-text" type="text" />
-							<button type="submit" title="Search"></button>
+						<div class="input-group">
+						  <input type="text" class="form-control" placeholder="请输入要搜索的商品" aria-describedby="basic-addon2">
+						  <button type="button" class="btn btn-success btn-md">
+						  <span class="glyphicon glyphicon-search" aria-hidden="true"></span>搜索</button>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
 		<!-- 头部结束 -->
-		<!-- 导航栏 -->
-		<div class="navigation_container">
-			<!---->
-			<div class="nav">
-				<ul class="primary_nav">
-					<li class="active highlight"><a href="#">女装</a> <!--二级菜单-->
-						<ul class="sub_menu">
-							<li><a href="#">裙装</a>
-								<ul>
-									<li><a href="#">短裙</a></li>
-									<li><a href="#">短裤</a></li>
-									<li><a href="#">裤子</a></li>
-									<li><a href="#">卡其裤</a></li>
-									<li><a href="#">休闲裤</a></li>
-									<li><a href="#">牛仔裤</a></li>
-									<li><a href="#">风衣 & 运动夹克</a></li>
-								</ul></li>
-							<li><a href="#">装饰品</a>
-								<ul>
-									<li><a href="#">太阳镜</a></li>
-									<li><a href="#">围巾</a></li>
-									<li><a href="#">发饰品</a></li>
-									<li><a href="#">帽子和手套</a></li>
-									<li><a href="#">生活时尚</a></li>
-									<li><a href="#">牛仔系列</a></li>
-									<li><a href="#">风衣 & 西服</a></li>
-								</ul></li>
-						</ul></li>
-					<!--二级菜单结束-->
-					<li><a href="#">男装</a> <!--二级菜单-->
-						<ul class="sub_menu">
-							<li><a href="#">男士夏装</a>
-								<ul>
-									<li><a href="#">裤子</a></li>
-									<li><a href="#">休闲裤</a></li>
-									<li><a href="#">卡其裤</a></li>
-									<li><a href="#">牛仔裤</a></li>
-									<li><a href="#">风衣 & 运动夹克</a></li>
-								</ul></li>
-							<li><a href="#">装饰品</a>
-								<ul>
-									<li><a href="#">太阳镜</a></li>
-									<li><a href="#">围巾</a></li>
-									<li><a href="#">发饰品</a></li>
-									<li><a href="#">帽子和手套</a></li>
-									<li><a href="#">生活时尚</a></li>
-									<li><a href="#">牛仔系列</a></li>
-									<li><a href="#">风衣 & 西服</a></li>
-								</ul></li>
-						</ul> <!--二级菜单结束--></li>
-					<li><a href="#">儿童</a></li>
-					<li><a href="#">时尚</a></li>
-					<li><a href="#">装饰品</a></li>
-				</ul>
-			</div>
-		</div>
-		<!--导航栏结束-->
 		<div class="section_container">
-			<!-- 购物车 -->
-			<div id="dd" class="action_buttonbar" style="text-align:center;">
-				<!--  <form method="post" action="${shop}/user_login.action">
-					-->
+		<div id="dd" class="action_buttonbar" style="text-align:center;">
 		<form class="form-horizontal col-md-offset-4">
 
 		<div class="form-group">
@@ -130,30 +70,11 @@
 		</div>
 		
 		   
-		</form>		
-					<!--  
-					<div>
-						<label for="login">账号:&nbsp;</label> 
-						<input type="text" name="login" />
-					</div>
-					<div>
-						<label for="pass">密码:&nbsp</label> 
-						<input type="text" name="pass" />
-					</div>-->
-					<div>
-						<!-- ${requestScope.error}-->  
-					</div>
-					<div>
-					<!--
-						<input type="submit" value="登陆" style="width:60px;height:30px" />
-						--> 
-						<button type="button" class="btn btn-success btn-lg">&nbsp;&nbsp;登录&nbsp;&nbsp;</button>
-						<button type="button" class="btn btn-warning btn-lg">&nbsp;&nbsp;注册&nbsp;&nbsp;</button>
-						<!--<input type="button" value="注册" onclick="window.open('${shop}/index.jsp','_self')" style="width:60px;height:30px" />
-					  -->
-					</div>
-			   <div style="clear:both"></div>
-			</div>
+		</form>	
+		<div>	
+			<button type="button" class="btn btn-success btn-lg">&nbsp;&nbsp;登录&nbsp;&nbsp;</button>
+			<button type="button" class="btn btn-warning btn-lg">&nbsp;&nbsp;注册&nbsp;&nbsp;</button>
+        </div>	 
 		</div>
 			<!-- 导航栏结束 -->
 			<div class="footer_container">
@@ -202,6 +123,7 @@
 							</ul></li>
 					</ul>
 				</div>
+			</div>
 			</div>
 			</div>
 			<script type="text/javascript" src="${shop}/bootstrap/js/bootstrap.min.js"></script>
