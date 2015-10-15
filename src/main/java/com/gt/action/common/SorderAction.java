@@ -20,28 +20,19 @@ public class SorderAction extends BaseAction<Sorder> {
     	 //到数据库中找到相应的商品数据
     	 Product product = productService.get(model.getProduct().getId());
     	 //判断session中有没有购物车
-    	 System.out.println("-----------");
     	 if(session.get("busOrder")==null){
     		 session.put("busOrder", new Busorder(new HashSet<Sorder>()));
     	 }
     	 System.out.println("----shopcar-----");
     	 System.out.println(model.getProduct().getId());
     	 //把商品信息转化为sorder
-    	 model.setName(product.getName());
-    	 model.setNumber(1);
-    	 model.setPrice(product.getPrice());
-    	 model.setProduct(product);
-    	 Busorder busorder = (Busorder)session.get("busOrder");
-    	 busorder.getSorderSet().add(model);
+    	 Busorder border = (Busorder)session.get("busOrder");
+    	 Busorder busorder = sorderService.Sorderadd(border, product);
     	 //计算总价格
-    	 double total = 0.0;
-    	 for (Sorder sorder : busorder.getSorderSet()) {
-			 total += sorder.getPrice()*sorder.getNumber();
-		 }
-    	 busorder.setTotal(total);
-    	 
+    	 busorder.setTotal(busOrderService.TotalCount(busorder));
+    	 System.out.println(busorder.getSorderSet().size());
+    	 session.put("ordertotal",busorder.getSorderSet().size());
     	 session.put("busOrder", busorder);
-    
     	 return "shopcar";
      }
 }

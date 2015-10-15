@@ -1,8 +1,8 @@
 package com.gt.model;
 
-import java.io.Serializable;
 
-public class ComboType implements Serializable{
+
+public class ComboType implements java.io.Serializable{
 	/**
 	 * 
 	 */

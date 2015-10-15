@@ -2,7 +2,13 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
 <head>
-	<%@include file="/public/head.jspf"%>
+	<%@include file="public/head.jspf"%>
+	<link rel="stylesheet" href="${shop}/bootstrap/css/bootstrap.min.css" />
+	<style type="text/css">
+		#dd div{
+			padding: 5px;
+		}
+	</style>
 <body>
 	<div class="wrapper">
 		<div class="header">
@@ -25,8 +31,7 @@
 					</h1>
 					<!-- 小购物车 -->
 					<div class="minicart">
-						<a class="minicart_link" href="#"> <span class="item">
-								<b>${sessionScope.ordertotal}</b> 件/ </span> <span class="price"> <b>￥${sessionScope.busOrder.total}</b> </span> </a>
+						<a class="minicart_link" href="#"> <span class="item"></span></a>
 					</div>
 					<!-- 小购物车结束 -->
 					<!-- 搜索框 -->
@@ -99,85 +104,57 @@
 		<!--导航栏结束-->
 		<div class="section_container">
 			<!-- 购物车 -->
-			<div id="shopping_cart">
-				<div class="message success">我的购物车</div>
-				<table class="data-table cart-table" cellpadding="0" cellspacing="0">
-					<tr>
-						<th class="align_center" width="10%">商品编号</th>
-						<th class="align_left" width="35%" colspan="2">商品名称</th>
-						<th class="align_center" width="10%">销售价格</th>
-						<th class="align_center" width="20%">数量</th>
-						<th class="align_center" width="15%">小计</th>
-						<th class="align_center" width="10%">删除</th>
-					</tr>
-					
-					<c:forEach items="${sessionScope.busOrder.getSorderSet()}" var="sorder" varStatus="order"> 
-					<tr>
-						<td class="align_center"><a href="#" class="edit">${order.count}</a>
-						</td>
-						<td width="80px"><img src="${shop}/image/${sorder.product.pic}" width="80"
-							height="80" />
-						</td>
-						<td class="align_left"><a class="pr_name" href="#">${sorder.name}</a>
-						</td>
-						<td class="align_center vline"><span class="price">￥${sorder.price}</span>
-						</td>
-						<td class="align_center vline">
-							<div class="wrap-input">
-								<input class="text" style="height: 20px;" value="${sorder.number}">		
-							</div>
-						</td>
-						<td class="align_center vline"><span class="price">￥${sorder.price*sorder.number}</span>
-						</td>
-						<td class="align_center vline"><a href="#" class="remove"></a>
-						</td>
-					</tr>
-					</c:forEach>
-				</table>
-				<!-- 结算 -->
-				<div class="totals">
-					<table id="totals-table">
-						<tbody>
-							<tr>
-								<td width="60%" colspan="1" class="align_left"><strong>小计</strong>
-								</td>
-								<td class="align_right" style=""><strong><span
-										class="price">￥${sessionScope.busOrder.total}</span>
-								</strong>
-								</td>
-							</tr>
-							<tr>
-								<td width="60%" colspan="1" class="align_left">运费</td>
-								<td class="align_right" style=""><span class="price">￥0.00</span>
-								</td>
-							</tr>
-							<tr>
-								<td width="60%" colspan="1" class="align_left total"><strong>总计</strong>
-								</td>
-								<td class="align_right" style=""><span class="total"><strong>￥${sessionScope.busOrder.total}</strong>
-								</span>
-								</td>
-							</tr>
-						</tbody>
-					</table>
-					<div class="action_buttonbar">
-						<button type="button" title="" class="checkout fr"
-							style="background-color: #f38256;">
-							<font><font>结帐</font>
-							</font>
-						</button>
-						<button type="button" title="" class=" fr">
-							<font><font>清空购物车</font>
-							</font>
-						</button>
-						<button type="button" title="" class="continue fr">
-							<font><font>继续购物</font>
-							</font>
-						</button>
-						<div style="clear:both"></div>
+			<div id="dd" class="action_buttonbar" style="text-align:center;">
+				<!--  <form method="post" action="${shop}/user_login.action">
+					-->
+		<form class="form-horizontal col-md-offset-4">
+
+		<div class="form-group">
+		<div class="col-md-6">
+		<div class="input-group input-group-lg">
+		<span class="input-group-addon"><span class="glyphicon glyphicon-user"></span></span>
+		<input type="text" class="form-control" name="username" id="username" placeholder="用户名">
+		</div>
+		</div>
+		</div>
+
+		<div class="form-group">
+		<div class="col-md-6">
+		<div class="input-group input-group-lg">
+		<span class="input-group-addon">
+		<span class="glyphicon glyphicon-lock"></span>
+		</span>
+		<input type="password" class="form-control" name="password" id="password" placeholder="密码">
+		</div>
+		</div>
+		</div>
+		
+		   
+		</form>		
+					<!--  
+					<div>
+						<label for="login">账号:&nbsp;</label> 
+						<input type="text" name="login" />
 					</div>
-				</div>
+					<div>
+						<label for="pass">密码:&nbsp</label> 
+						<input type="text" name="pass" />
+					</div>-->
+					<div>
+						<!-- ${requestScope.error}-->  
+					</div>
+					<div>
+					<!--
+						<input type="submit" value="登陆" style="width:60px;height:30px" />
+						--> 
+						<button type="button" class="btn btn-success btn-lg">&nbsp;&nbsp;登录&nbsp;&nbsp;</button>
+						<button type="button" class="btn btn-warning btn-lg">&nbsp;&nbsp;注册&nbsp;&nbsp;</button>
+						<!--<input type="button" value="注册" onclick="window.open('${shop}/index.jsp','_self')" style="width:60px;height:30px" />
+					  -->
+					</div>
+			   <div style="clear:both"></div>
 			</div>
+		</div>
 			<!-- 导航栏结束 -->
 			<div class="footer_container">
 				<div class="footer">
@@ -227,6 +204,6 @@
 				</div>
 			</div>
 			</div>
-			</div>
+			<script type="text/javascript" src="${shop}/bootstrap/js/bootstrap.min.js"></script>
 </body>
 </html>

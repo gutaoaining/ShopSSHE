@@ -19,6 +19,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 import com.gt.model.FileImage;
 import com.gt.services.base.AccountServiceI;
+import com.gt.services.base.BusOrderServiceI;
 import com.gt.services.base.CategoryServiceI;
 import com.gt.services.base.ProductServiceI;
 import com.gt.services.base.SorderServiceI;
@@ -115,6 +116,8 @@ public class BaseAction<T> extends ActionSupport implements RequestAware,Session
     protected UploadFile uploadFile;
     @Autowired
     protected SorderServiceI sorderService;
+    @Autowired
+    protected BusOrderServiceI busOrderService;
     
 	public void WriteJson(Object obj){
  

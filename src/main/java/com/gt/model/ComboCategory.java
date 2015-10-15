@@ -1,8 +1,7 @@
 package com.gt.model;
 
-import java.io.Serializable;
 
-public class ComboCategory implements Serializable{
+public class ComboCategory implements java.io.Serializable{
 	/**
 	 * 
 	 */
