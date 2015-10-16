@@ -8,8 +8,7 @@
 		#dd div{
 			padding: 5px;
 		}
-        .header_search {cursor: pointer; float: right; height: 23px;
-    margin: 30px 0; padding: 3px; width: 230px;}
+       
 	</style>
 <body>
 	<div class="wrapper">
@@ -36,10 +35,11 @@
 					<!-- 搜索框 -->
 					<div class="header_search">
 						<div class="input-group">
-						  <input type="text" class="form-control" placeholder="请输入要搜索的商品" aria-describedby="basic-addon2">
-						  <button type="button" class="btn btn-success btn-md">
-						  <span class="glyphicon glyphicon-search" aria-hidden="true"></span>搜索</button>
-						</div>
+						  <input type="text" class="form-control" placeholder="请输入要查询的商品">
+						  <div class="input-group-btn">
+    						<button type="button" class="btn btn-success btn-md">
+    						<span class="glyphicon glyphicon-search" aria-hidden="true"></span>&nbsp;搜索</button>
+						  </div>
 					</div>
 				</div>
 			</div>
@@ -123,6 +123,7 @@
 							</ul></li>
 					</ul>
 				</div>
+			</div>
 			</div>
 			</div>
 			</div>
