@@ -47,13 +47,13 @@
 		<!-- 头部结束 -->
 		<div class="section_container">
 		<div id="dd" class="action_buttonbar" style="text-align:center;">
-		<form class="form-horizontal col-md-offset-4">
+		<form class="form-horizontal col-md-offset-4" action="${shop}/usershop/useraction!Login.action">
 
 		<div class="form-group">
 		<div class="col-md-6">
 		<div class="input-group input-group-lg">
 		<span class="input-group-addon"><span class="glyphicon glyphicon-user"></span></span>
-		<input type="text" class="form-control" name="username" id="username" placeholder="用户名">
+		<input type="text" class="form-control" name="login" id="login" placeholder="用户名">
 		</div>
 		</div>
 		</div>
@@ -64,17 +64,17 @@
 		<span class="input-group-addon">
 		<span class="glyphicon glyphicon-lock"></span>
 		</span>
-		<input type="password" class="form-control" name="password" id="password" placeholder="密码">
+		<input type="password" class="form-control" name="pass" id="pass" placeholder="密码">
 		</div>
 		</div>
 		</div>
 		
-		   
-		</form>	
-		<div>	
-			<button type="button" class="btn btn-success btn-lg">&nbsp;&nbsp;登录&nbsp;&nbsp;</button>
+		   <div>	
+			<button type="submit" class="btn btn-success btn-lg">&nbsp;&nbsp;登录&nbsp;&nbsp;</button>
 			<button type="button" class="btn btn-warning btn-lg">&nbsp;&nbsp;注册&nbsp;&nbsp;</button>
-        </div>	 
+           </div>	
+		</form>	
+		 
 		</div>
 			<!-- 导航栏结束 -->
 			<div class="footer_container">

@@ -1,6 +1,8 @@
 package com.gt.model;
 // Generated 2015-10-11 20:55:41 by Hibernate Tools 4.0.0
 
+import com.alibaba.druid.pool.vendor.SybaseExceptionSorter;
+
 /**
  * 
 * @ClassName: User 
@@ -29,15 +31,7 @@ public class User implements java.io.Serializable {
 	public User() {
 	}
 
-	public User(String login, String name, String pass, String sex, String phone, String email) {
-		this.login = login;
-		this.name = name;
-		this.pass = pass;
-		this.sex = sex;
-		this.phone = phone;
-		this.email = email;
-	}
-
+	
 	public Integer getId() {
 		return this.id;
 	}
@@ -94,4 +88,10 @@ public class User implements java.io.Serializable {
 		this.email = email;
 	}
 
+	@Override
+	public String toString() {
+		return "User [id=" + id + ", login=" + login + ", name=" + name + ", pass=" + pass + ", sex=" + sex + ", phone="
+				+ phone + ", email=" + email + "]";
+	}
+    
 }

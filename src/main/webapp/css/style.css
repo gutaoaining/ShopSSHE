@@ -120,8 +120,12 @@ ul.breadcrumb li.active a { color:#f38256; }
 #totals-table ,#totals-table td{ border: none; }
 
 .action_buttonbar { background: #f9f8f6; border: solid 1px #ebe2d9; padding: 13px; clear: both; }
-.action_buttonbar button { color: #fff; font-size: 14px; font-weight: bold; padding: 8px 14px; background: #544F4B; border: 0px; line-height: 100%; cursor: pointer; margin-left: 10px; }
-
+.action_buttonbar button{ color: #fff; font-size: 14px; font-weight: bold; padding: 8px 14px; background: #544F4B; border: 0px; line-height: 100%; cursor: pointer; margin-left: 10px; }
+.action_buttonbar a{ color: #fff; font-size: 14px; font-weight: bold; padding: 8px 14px; background: #544F4B; border: 0px; line-height: 100%; cursor: pointer; margin-left: 10px; }
+.action_buttonbar a:hover{
+    color: #ff8000;
+    text-decoration: none;
+}
 
 /*确认页面*/
 .check{ border: 1px solid #E8E8E8; margin-bottom: 20px; }

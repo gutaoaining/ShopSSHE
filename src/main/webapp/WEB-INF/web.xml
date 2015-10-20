@@ -21,6 +21,10 @@
     <filter-name>struts2</filter-name>
     <filter-class>org.apache.struts2.dispatcher.ng.filter.StrutsPrepareAndExecuteFilter</filter-class>
   </filter>
+  <filter>
+     <filter-name>userFilter</filter-name>
+     <filter-class>com.gt.filter.LoginFilter</filter-class>
+  </filter>
 
   <filter-mapping>
     <filter-name>openSessionInViewFilter</filter-name>
@@ -30,7 +34,10 @@
     <filter-name>struts2</filter-name>
     <url-pattern>/*</url-pattern>
   </filter-mapping>
-
+  <filter-mapping>
+     <filter-name>userFilter</filter-name>
+     <url-pattern>/user/*</url-pattern>
+  </filter-mapping>
   <!--ContextLoaderListener监听器的作用就是启动Web容器时，
   自动装配ApplicationContext的配置信息。
   因为它实现了ServletContextListener这个接口，在web.xml配置这个监听器，

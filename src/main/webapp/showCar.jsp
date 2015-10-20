@@ -3,6 +3,8 @@
 <html>
 <head>
 	<%@include file="/public/head.jspf"%>
+    <link rel="stylesheet" href="${shop}/bootstrap/css/bootstrap.min.css" />
+	
 <body>
 	<div class="wrapper">
 		<div class="header">
@@ -31,11 +33,14 @@
 					<!-- 小购物车结束 -->
 					<!-- 搜索框 -->
 					<div class="header_search">
-						<div class="form-search ">
-							<input value="请输入商品名称" class="input-text" type="text" />
-							<button type="submit" title="Search"></button>
-						</div>
+						<div class="input-group">
+						  <input type="text" class="form-control" placeholder="请输入要查询的商品">
+						  <div class="input-group-btn">
+    						<button type="button" class="btn btn-success btn-md">
+    						<span class="glyphicon glyphicon-search" aria-hidden="true"></span>&nbsp;搜索</button>
+						  </div>
 					</div>
+				</div>
 				</div>
 			</div>
 		</div>
@@ -161,19 +166,22 @@
 						</tbody>
 					</table>
 					<div class="action_buttonbar">
-						<button type="button" title="" class="checkout fr"
-							style="background-color: #f38256;">
-							<font><font>结帐</font>
+	
+							<font><font><a class="checkout fr"
+							style="background-color: #f38256;" href="${shop}/user/Temp.jsp">结帐</a>
 							</font>
-						</button>
-						<button type="button" title="" class=" fr">
-							<font><font>清空购物车</font>
+						    </font>
+						    
+						    <font><font><a class=" fr"
+							 href="#">清空购物车</a>
 							</font>
-						</button>
-						<button type="button" title="" class="continue fr">
-							<font><font>继续购物</font>
+						    </font>
+					
+					    <font><font><a class="continue fr"
+							 href="#">继续购物</a>
 							</font>
-						</button>
+						    </font>
+			
 						<div style="clear:both"></div>
 					</div>
 				</div>
@@ -228,5 +236,7 @@
 			</div>
 			</div>
 			</div>
+			<script type="text/javascript" src="${shop}/bootstrap/js/bootstrap.min.js"></script>
+			
 </body>
 </html>
