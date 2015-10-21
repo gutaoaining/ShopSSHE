@@ -31,12 +31,15 @@ public class LoginFilter implements Filter {
 			throws IOException, ServletException {
            HttpServletRequest req = (HttpServletRequest)request;
            HttpServletResponse resp = (HttpServletResponse)response;
+          
            if(req.getSession().getAttribute("user")==null){
+        	   String goURL = req.getServletPath();
+        	   String param = req.getQueryString();
+        	   if(param!=null){
+        		   goURL = goURL + "?" + param;
+        	   }
+        	   req.getSession().setAttribute("goURL", goURL);
         	   req.setAttribute("error", "请求非法，请登录后重试！");
-        	   System.out.println("test:"+req.getServerPort());
-        	   System.out.println("test:"+req.getRequestURI());
-        	   System.out.println("test:"+req.getLocalPort());
-        	   System.out.println("请求路径："+req.getContextPath());
         	   resp.sendRedirect(req.getContextPath()+"/ulogin.jsp");
            }else{
         	   chain.doFilter(request, response);

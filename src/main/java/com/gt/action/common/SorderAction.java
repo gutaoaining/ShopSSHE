@@ -16,7 +16,12 @@ import com.gt.model.Sorder;
 @Namespace("/usershop")                                                                              
 @Action(value="sorderAction",results={@Result(name="shopcar",type="redirect",location="/showCar.jsp")})
 public class SorderAction extends BaseAction<Sorder> {
-     public String addProduct(){
+     /**
+	 * 
+	 */
+	private static final long serialVersionUID = 4010906267970601069L;
+
+	public String addProduct(){
     	 //到数据库中找到相应的商品数据
     	 Product product = productService.get(model.getProduct().getId());
     	 //判断session中有没有购物车

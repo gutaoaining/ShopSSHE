@@ -38,8 +38,9 @@
 	 </interceptors>
 	 <default-interceptor-ref name="mydefault"></default-interceptor-ref>
 	 <global-results>
-	    <result name="index">/index.jsp</result>
-	    <result name="ulogin" type="redirect">/ulogin.jsp</result>                    
+	    <result name="index" type="redirect">/index.jsp</result>
+	    <result name="ulogin" type="redirect">/ulogin.jsp</result> 
+	    <result name="goURL">${#session.goURL}</result>                                                
 	 </global-results>
      <global-exception-mappings>
 			<exception-mapping result="strutsException" exception="java.lang.Exception"></exception-mapping>
