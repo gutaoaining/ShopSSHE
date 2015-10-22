@@ -22,9 +22,10 @@ public class AccountAction extends BaseAction<Account>{
 	private static final long serialVersionUID = 1L;
 
 	public String query(){
-    	 request.put("requestlist",accountService.query());
-    	 session.put("sessionlist",accountService.query());
-    	 application.put("applicationlist",accountService.query());
+//    	 request.put("requestlist",accountService.query());
+//    	 session.put("sessionlist",accountService.query());
+//    	 application.put("applicationlist",accountService.query());
+    	 application.put("testap", "gutaoTest");
     	 return "index";
      }
 	public void queryAccount(){

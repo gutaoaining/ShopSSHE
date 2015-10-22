@@ -51,6 +51,7 @@ public class ProductTimerTask extends TimerTask{
 			alllist.add(productService.getProductByCid(category.getId()));
 		}
 	    getServletContext().setAttribute("alllist", alllist);
+	    getServletContext().setAttribute("aptes", "gutao");
 		
 	//	System.out.println("-----run------");
 	}

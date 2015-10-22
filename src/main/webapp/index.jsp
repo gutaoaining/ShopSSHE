@@ -29,7 +29,7 @@
                             <div class="minicart">
                                 <a class="minicart_link" href="#">
                                     <span class="item">
-                                        <b>2</b> 件/
+                                        <b>2${applicationScope.aptes}${applicationScope.testap}</b> 件/
                                     </span>
                                     <span class="price">
                                         <b>￥199.80</b>
@@ -228,7 +228,7 @@
                     </ul>
                 </li>
             </ul>
-            
+            </div>
             </div>
     </div>
 </body>
