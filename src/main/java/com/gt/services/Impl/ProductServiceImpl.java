@@ -41,7 +41,6 @@ public class ProductServiceImpl extends BaseServiceImpl<Product> implements Prod
 		String hql = "delete Product p where p.id in ("+ids+")";
 		System.out.println("获得到的hql语句："+hql);
 		productDao.deleteMore(hql);
-		
 	}
 
 	@Override
@@ -52,6 +51,6 @@ public class ProductServiceImpl extends BaseServiceImpl<Product> implements Prod
 	public List<Product> getProductByCid(int cid) {
 		return productDao.getProductByCid(cid);
 	}
-	
+
 
 }

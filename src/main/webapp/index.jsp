@@ -6,6 +6,14 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>商城首页</title>
 <%@ include file="/public/head.jspf"%>
+<style type="text/css">
+.header_search {border: 1px solid #E1E1E1; cursor: pointer; float: right; height: 23px;
+    margin: 30px 0; padding: 3px; width: 230px;}
+.header_search  input{background: none repeat scroll 0 0 rgba(0, 0, 0, 0);border: 0 none; color: #B4B4B4; padding: 4px; width: 82%;}
+.header .header_search button {background: url("images/search_btn.png") no-repeat scroll center center rgba(0, 0, 0, 0);
+    border: 0 none; float: right; height: 20px; margin: 2px;width: 20px;cursor: pointer;}
+
+</style>
 </head>
 <body>
 <div class="wrapper">
@@ -20,7 +28,7 @@
                                 <li><a href="#">我的账户</a></li>
                                 <li><a href="#">购物车</a></li>
                                 <li><a href="#">注册</a></li>
-                                <li ><a href="#">登录</a></li>
+                                <li ><a href="${shop}/ulogin.jsp">登录</a></li>
                             </ul>
                             <!--头部小导航结束-->
                             <!-- logo -->
