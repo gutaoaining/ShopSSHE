@@ -12,7 +12,7 @@
 				<!--头部开始-->
 				<div class="top_bar clear">
 					<!--头部小导航-->
-					<div class="welcom fl">欢迎光临LEISUPET SHOP!</div>
+					<div class="welcom fl">欢迎光临e购 SHOP!</div>
 					<ul class="top_links fr">
 						<li><a href="${shop}/index.jsp">首页</a></li>
 						<li><a href="#">我的账户</a></li>

@@ -13,10 +13,10 @@
                 <!--头部开始-->
                 <div class="top_bar clear">
                     <!--头部小导航-->
-                    <div class="welcom fl">欢迎光临LEISUPET SHOP!</div>
+                    <div class="welcom fl">欢迎光临e购 SHOP!</div>
                     <ul class="top_links fr">
                         <li class="highlight">
-                            <a href="#">首页</a>
+                            <a href="${shop}/index.jsp">首页</a>
                         </li>
                         <li>
                             <a href="#">我的账户</a>
@@ -25,10 +25,10 @@
                             <a href="#">购物车</a>
                         </li>
                         <li>
-                            <a href="#">注册</a>
+                            <a href="${shop}/ulogin.jsp">注册</a>
                         </li>
                         <li >
-                            <a href="#">登录</a>
+                            <a href="${shop}/ulogin.jsp">登录</a>
                         </li>
                     </ul>
                     <!--头部小导航结束-->

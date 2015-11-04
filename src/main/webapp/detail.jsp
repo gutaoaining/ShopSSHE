@@ -4,6 +4,14 @@
 <head>
 	<%@include file="/public/head.jspf"%>
 	<link rel="stylesheet" href="${shop}/css/detail.css" />
+	<style type="text/css">
+	.header_search {border: 1px solid #E1E1E1; cursor: pointer; float: right; height: 23px;
+	    margin: 30px 0; padding: 3px; width: 230px;}
+	.header_search  input{background: none repeat scroll 0 0 rgba(0, 0, 0, 0);border: 0 none; color: #B4B4B4; padding: 4px; width: 82%;}
+	.header .header_search button {background: url("images/search_btn.png") no-repeat scroll center center rgba(0, 0, 0, 0);
+	    border: 0 none; float: right; height: 20px; margin: 2px;width: 20px;cursor: pointer;}
+
+</style>
 </head>
 <body>
     <div class="wrapper">
@@ -12,10 +20,10 @@
                 <!--头部开始-->
                 <div class="top_bar clear">
                     <!--头部小导航-->
-                    <div class="welcom fl">欢迎光临LEISUPET SHOP!</div>
+                    <div class="welcom fl">欢迎光临e购 SHOP!</div>
                     <ul class="top_links fr">
                         <li class="highlight">
-                            <a href="#">首页</a>
+                            <a href="${shop}/index.jsp">首页</a>
                         </li>
                         <li>
                             <a href="#">我的账户</a>
@@ -24,10 +32,10 @@
                             <a href="#">购物车</a>
                         </li>
                         <li>
-                            <a href="#">注册</a>
+                            <a href="${shop}/ulogin.jsp">注册</a>
                         </li>
                         <li >
-                            <a href="#">登录</a>
+                            <a href="${shop}/ulogin.jsp">登录</a>
                         </li>
                     </ul>
                     <!--头部小导航结束-->
