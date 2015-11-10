@@ -3,6 +3,8 @@ package com.gt.action.common;
 
 import java.util.HashSet;
 
+import javax.sound.midi.Synthesizer;
+
 import org.apache.struts2.convention.annotation.Action;
 import org.apache.struts2.convention.annotation.Namespace;
 import org.apache.struts2.convention.annotation.ParentPackage;
@@ -26,11 +28,10 @@ public class SorderAction extends BaseAction<Sorder> {
     	 Product product = productService.get(model.getProduct().getId());
     	 //判断session中有没有购物车
     	 if(session.get("busOrder")==null){
+             System.out.println("没有购物车");
     		 session.put("busOrder", new Busorder(new HashSet<Sorder>()));
     	 }
-    	 System.out.println("----shopcar-----");
-    	 System.out.println(model.getProduct().getId());
-    	 //把商品信息转化为sorder
+        	 //把商品信息转化为sorder
     	 Busorder border = (Busorder)session.get("busOrder");
     	 Busorder busorder = sorderService.Sorderadd(border, product);
     	 //计算总价格
@@ -38,6 +39,7 @@ public class SorderAction extends BaseAction<Sorder> {
     	 System.out.println(busorder.getSorderSet().size());
     	 session.put("ordertotal",busorder.getSorderSet().size());
     	 session.put("busOrder", busorder);
+    	 System.out.println("添加结束");
     	 return "shopcar";
      }
 }

@@ -13,8 +13,8 @@ public class Status implements java.io.Serializable {
 	private Integer id;
 	private String status;
 
-	public Status(String status) {
-		this.status = status;
+	public Status(int i) {
+		this.id = i;
 	}
 
 	public Integer getId() {

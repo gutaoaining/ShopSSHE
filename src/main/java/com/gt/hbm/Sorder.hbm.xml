@@ -17,12 +17,12 @@
         <property name="number" type="java.lang.Integer">
             <column name="number" />
         </property>
+        <!-- 多个购物项对应一个商品 -->
         <many-to-one name="product" class="Product">
             <column name="pid" />  
         </many-to-one>
-           
-  
-         <many-to-one name="">
+       <!-- 这里是配置购物车，多个购物项对应一个购物车 -->
+         <many-to-one name="busorder" class="Sorder">
             <column name="bid" />
          </many-to-one>
          

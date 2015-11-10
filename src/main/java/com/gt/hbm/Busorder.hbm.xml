@@ -40,8 +40,14 @@
        <!--
                 如果是多对一的查找，就是通过表中的外键查找对应的主表中的主键
                 如果是一对多，则是查询自己的主键找到对应表中的外键
+                步骤：如果是多对一，则通过表的外键，查询对应主表中的主键
+                若是一对多，则通过主表中的主键，去查找子表中对应的外键
+                查询有关：lazy="true"支持懒加载，fetch="join"关联对象的抓取策略，为了提升性能此处不应该配置
+                更新有关：cascade="all"是否支持级联操作，hibernate中都有的级联插入
+                ，inverse="false"控制反转，又称反向，指定谁来维护外键，建议为true，为true则是自己负责
+                本表不负责操作,有外键的表负责外键的维护；
         -->
-       <set name="sorderSet">
+       <set name="sorderSet" lazy="false" cascade="all" inverse="true">
          <!-- 代表的是外键 -->
         <key>
           <column name="bid"/>

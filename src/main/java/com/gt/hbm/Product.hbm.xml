@@ -36,5 +36,6 @@
         <many-to-one name="category" class="Category" lazy="false">
             <column name="cid" />
         </many-to-one>
+        
     </class>
 </hibernate-mapping>

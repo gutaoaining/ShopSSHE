@@ -25,13 +25,14 @@ public class Busorder implements java.io.Serializable {
 	private Status status;
 	private User user;
 	private Set<Sorder> sorderSet;
-	
-	
-
 
 	public Busorder(Set<Sorder> sorderSet) {
 		super();
 		this.sorderSet = sorderSet;
+	}
+
+
+	public Busorder() {
 	}
 
 

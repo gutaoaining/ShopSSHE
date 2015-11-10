@@ -3,9 +3,13 @@
 <html>
   <head>
 	  <%@include file="/public/head.jspf" %>	
+	  <% response.setHeader("cache-control", "no-store");%>
 	  <link rel="stylesheet" href="${shop}/bootstrap/css/bootstrap.min.css" />  
   </head>
   <body>
+  <c:if test="${empty sessionScope.busOrder.sorderSet}">
+      <c:redirect url="/index.jsp"/>
+  </c:if>
   	 <div class="wrapper">
         <div class="header">
             <div class="header_container">
@@ -236,7 +240,7 @@
                    
                 </div>
                 <!-- 订购人确认 -->
-                <form action="#" method="post">
+                <form action="${shop}/usershop/busOrderAction!save.action" method="post">
 	                <div class="person-check check">
 	                    <h1>订购人信息</h1>
 	                    <div class="person-checkinner">

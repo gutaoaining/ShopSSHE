@@ -14,6 +14,14 @@ import com.gt.model.Product;
 @ParentPackage("basePackage")
 @Namespace("/usershop")
 @Action(value = "productAction", results={@Result(name="detail",location="/detail.jsp")})
+/**
+ * 
+* @ClassName: ProductAction 
+* @Description: TODO(用来处理商品的action) 
+* @author gutao 
+* @date 2015年11月10日 下午9:02:53 
+*
+ */
 public class ProductAction extends BaseAction<Product> {
 	/**
 	 * 

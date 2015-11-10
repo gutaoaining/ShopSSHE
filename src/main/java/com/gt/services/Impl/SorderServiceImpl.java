@@ -22,8 +22,11 @@ public class SorderServiceImpl extends BaseServiceImpl<Sorder> implements Sorder
 			}			
 		}
 		if(isHave == false){
+			//此时border的主键为空，入库时会自动生成
+			sorder.setBusorder(border);
 			border.getSorderSet().add(sorder);
 		}
+		System.out.println("-----SorderServiceImpl-----");
 		return border;
 	}
    public Sorder productToSorder(Product product){

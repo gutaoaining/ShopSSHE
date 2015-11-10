@@ -14,7 +14,7 @@
 <script>DD_belatedPNG.fix('.pngfix');</script>
 <![endif]-->
 <link href="loginfiles/a.css" rel="stylesheet" type="text/css">
-<script src="loginfiles/a.js"></script>
+
 <link href="loginfiles/default_f7b28aa3.css" type="text/css" rel="stylesheet">
 
 <link href="loginfiles/header_c8045ce8.css" rel="stylesheet" type="text/css">
@@ -100,18 +100,17 @@
     </div>
   </div>
 </header>
-<script src="loginfiles/header_9ed2e48d.js"></script>
+
 <div class="container">
 	<div class="wrap">
     	<div class="user-login-reg ui-tab-panel">
       		<div class="ui-tab-control">
         		<ul class="clearfix">
-          			<li class="active" data-name="hregist">e购网注册</li>
-          			<li data-name="hlogin">e购网登录</li>
+          			<li class="active" data-name="hregist">e购网登录</li>
         		</ul>
       		</div>
       		<div class="ui-tab-container">
-        		<div class="ui-tab-toggle hide">
+        		<div class="ui-tab-toggle">
           		<form action="${shop}/usershop/useraction!Login.action" method="post" class="login-form" autocomplete="off">
           		<!--  
           		<input name="user_kind" value="2" type="hidden">
@@ -142,37 +141,9 @@
            		</div>
           		</form>
         		</div>
-        		
-        		<div class="ui-tab-toggle">
-          		<form lt-plugins-valid="0.6806296750298872" action="/user/ajaxregh" method="post" class="reg-form" autocomplete="off">
-           		<!--  
-           		<input name="inviteHId" value="" type="hidden">
-           		<input name="user_kind" value="2" type="hidden">-->
-           		<div>
-             			<input name="h_name" class="text input-xlarge" data-selector="username" validate-title="真实姓名" validate-rules="['required',['cn','$必须由汉字组成'],['length',{'max':5,'min':2},'$长度必须介于 2 位和 5 位之间']]" placeholder="请填写中文真实姓名" type="text">
-           		</div>
-	            <div>
-	              	<input name="user_login" class="text input-xlarge" data-selector="email" validate-title="登录邮箱" validate-rules="['required','email']" placeholder="请填写有效邮箱，用以登录网站" type="text">
-	            </div>
-	            <div>
-	              	<input name="user_pwd" class="text input-xlarge" data-selector="password" validate-title="密码" validate-rules="[['required','请输入$'],['pattern',/^[0-9a-zA-Z]+$/,'$只能用字母和数字'],['length',{'min':4,'max':16},'$1长度不能$2$3']]" placeholder="密码(4-16位字母、数字，无空格)" type="password">
-	            </div>
-	            <div>
-	              	<input name="h_tel" class="text input-xlarge" data-selector="mobile" validate-title="手机号码" validate-rules="['required','mobile']" placeholder="请填写手机号码" type="text">
-	            </div>
-	            <div class="control-group optional">
-	              	<div>
-	                	<label validate-title="《e购网用户服务协议》" validate-rules="[['required',{'min': 1},'请选择接受$才可注册']]" validate-group="checkbox"><input class="checkbox" name="chk_agreement" value="on" checked="checked" type="checkbox"> 接受用户协议</label>
-	              	</div>
-	            </div>
-	            <div class="actions">
-	              	<input class="btn btn-warning" name="btn" value="立即注册" type="submit">
-	            </div>
-          		</form>
         		</div>
      		</div>
 		</div>
-	</div>
 </div>
 <div class="wrap">
 	<ul class="column clearfix">
@@ -280,7 +251,7 @@
 
 
 <script src="loginfiles/user.js"></script>
-<script src="loginfiles/stat_f37a07ef.js"></script>
+
 
 
 <div style="display: none; position: fixed; left: 0px; top: 0px; width: 100%; height: 100%; cursor: move; opacity: 0; background: rgb(255, 255, 255) none repeat scroll 0% 0%;"></div></body></html>
