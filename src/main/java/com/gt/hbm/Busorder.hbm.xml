@@ -29,9 +29,11 @@
         <property name="address" type="string">
             <column name="address" length="32" />
         </property>
+        <!-- 各个购物车订单项对应一个状态-->
        <many-to-one name="status" class="Status">
             <column name="sid" />
        </many-to-one>
+       <!-- 多个购物车对应一个用户 -->
        <many-to-one name="user" class="User">
                  <column name="uid" />
        </many-to-one>

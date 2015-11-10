@@ -212,9 +212,9 @@
 							<th class="align_center" width="20%">数量</th>
 							<th class="align_center" width="15%">小计</th>
 						</tr>
-						<c:forEach items="${sessionScope.busOrder.getSorderSet()}" var="sorder">
+						<c:forEach items="${sessionScope.busOrder.getSorderSet()}" var="sorder" varStatus="order">
 						<tr lang="123">
-							<td class="align_center"><a href="#" class="edit">${order.count}</a>
+							<td class="align_center"><a href="#" class="edit">${sorder.product.id}</a>
 							</td>
 							<td width="80px"><img src="${shop}/image/${sorder.product.pic}" width="80"
 								height="80" />
@@ -242,11 +242,11 @@
 	                    <div class="person-checkinner">
 	                        <div>
 	                        	<label>配送姓名:</label>
-	                        	<input type="text" name="name" />
+	                        	<input type="text" name="name" value="${sessionScope.user.name}" />
 	                        </div>
 	                        <div>
 	                        	<label>联系方式:</label>
-	                        	<input type="text" name="phone" />
+	                        	<input type="text" name="phone" value="${sessionScope.user.phone}"/>
 	                        </div>
 	                        <div>
 	                        	<label>区域邮编:</label>

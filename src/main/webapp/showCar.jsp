@@ -40,7 +40,7 @@
     						<span class="glyphicon glyphicon-search" aria-hidden="true"></span>&nbsp;搜索</button>
 						  </div>
 					</div>
-				</div>
+				   </div>
 				</div>
 			</div>
 		</div>
@@ -168,7 +168,7 @@
 					<div class="action_buttonbar">
 	
 							<font><font><a class="checkout fr"
-							style="background-color: #f38256;" href="${shop}/user/Temp.jsp">结帐</a>
+							style="background-color: #f38256;" href="${shop}/user/confirm.jsp">结帐</a>
 							</font>
 						    </font>
 						    

@@ -22,8 +22,10 @@
         </many-to-one>
            
   
-        <property name="bid" type="java.lang.Integer">
+         <many-to-one name="">
             <column name="bid" />
-        </property>
+         </many-to-one>
+         
+        
     </class>
 </hibernate-mapping>

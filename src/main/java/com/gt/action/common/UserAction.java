@@ -38,7 +38,6 @@ public class UserAction extends BaseAction<User> {
     		}else{
     			return "goURL";
     		}
-    		
     	}
     }
 }
