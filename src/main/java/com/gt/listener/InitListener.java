@@ -31,7 +31,7 @@ public class InitListener implements ServletContextListener {
 		applicationContext =(ApplicationContext)WebApplicationContextUtils.getWebApplicationContext(sce.getServletContext());
 		productTimerTask = (ProductTimerTask)applicationContext.getBean("productTimerTask");
 	    productTimerTask.setServletContext(sce.getServletContext());
-		new Timer(true).schedule(productTimerTask, 0, 1000*60*60); 
+		new Timer(true).schedule(productTimerTask, 0, 1000); 
 	}
 	@Override
 	public void contextDestroyed(ServletContextEvent sce) {
